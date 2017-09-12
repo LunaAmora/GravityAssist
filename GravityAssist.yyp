@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "8857db09-3ac2-4bfc-ae2b-d0df8e594ac8",
+            "Value": {
+                "id": "348090a9-28c6-41f2-a341-661a2da57736",
+                "resourcePath": "objects\\planet_obj\\planet_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8e84bdd1-8398-44e7-a343-ad14afe5df5c",
             "Value": {
                 "id": "323abacf-cb6a-4f9d-8214-ddaa163937ba",
