@@ -1,3 +1,4 @@
+active = 1;
 density = 0;
 orbit_distance = 0;
 atmosphere_distance = 0;
