@@ -5,7 +5,17 @@
     "name": "spaceship_obj",
     "eventList": [
         {
-            "id": "80d0b678-4947-4b5c-9ebb-39bc8135ca02",
+            "id": "573c048b-c48d-4afe-904d-238713842328",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "ba982392-1cfe-42ea-9c1b-5ef31adae568"
+        },
+        {
+            "id": "8ec2909d-248b-4698-89a0-cf84de3a538a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
