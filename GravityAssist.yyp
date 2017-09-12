@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "daa85ddd-e890-40c4-a0fe-a58807cc62b7",
+            "Value": {
+                "id": "785147b0-638b-4b2c-8abe-bd97b3bfe7f2",
+                "resourcePath": "objects\\trail_obj\\trail_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e7c8e386-1a72-4b8c-bd71-496b6469d63d",
             "Value": {
                 "id": "9504dae9-f3c9-49b0-af38-622d425f9ef0",
