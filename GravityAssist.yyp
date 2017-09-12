@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "ba982392-1cfe-42ea-9c1b-5ef31adae568",
+            "Value": {
+                "id": "4702ac7d-d190-46c8-9aca-970f823879ca",
+                "resourcePath": "objects\\spaceship_obj\\spaceship_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc0b84e6-3d9a-4184-baa8-8b57aed4d795",
             "Value": {
                 "id": "4ecdefef-12a8-4033-a783-47983329e01a",
