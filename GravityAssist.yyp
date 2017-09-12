@@ -66,7 +66,7 @@
             "Key": "6115ee8f-ac56-4926-a377-53b1df7f6ca3",
             "Value": {
                 "id": "8192eae6-0a74-4ef5-a338-e7e6bfaf93b2",
-                "resourcePath": "rooms\\room0\\room0.yy",
+                "resourcePath": "rooms\\space_room\\space_room.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -84,6 +84,14 @@
                 "id": "51a1f4ae-9b26-41d1-9050-1f430522bc39",
                 "resourcePath": "views\\69f77873-679a-4923-9139-f67699919624.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6b7254fc-da48-41cb-aa77-2f30bde9b040",
+            "Value": {
+                "id": "d81e2644-c1be-4d26-8ef6-fa219766e7d5",
+                "resourcePath": "sprites\\space_ship_spr\\space_ship_spr.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -119,6 +127,14 @@
             }
         },
         {
+            "Key": "84f84e50-9056-4fd1-8b94-6047631ea371",
+            "Value": {
+                "id": "08727e5c-cc89-4255-8c5c-9960d64f80de",
+                "resourcePath": "sprites\\planet_spr\\planet_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8e84bdd1-8398-44e7-a343-ad14afe5df5c",
             "Value": {
                 "id": "323abacf-cb6a-4f9d-8214-ddaa163937ba",
@@ -143,6 +159,14 @@
             }
         },
         {
+            "Key": "aa8c5827-6482-4746-bf04-83eb13c8c7ee",
+            "Value": {
+                "id": "12872249-55ca-4efd-a112-7ba3f0dd2b6d",
+                "resourcePath": "objects\\control\\control.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc0b84e6-3d9a-4184-baa8-8b57aed4d795",
             "Value": {
                 "id": "4ecdefef-12a8-4033-a783-47983329e01a",
@@ -164,6 +188,14 @@
                 "id": "3d68bdc3-2a05-43d0-973d-d97a3352b8f9",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "e7c8e386-1a72-4b8c-bd71-496b6469d63d",
+            "Value": {
+                "id": "9504dae9-f3c9-49b0-af38-622d425f9ef0",
+                "resourcePath": "sprites\\trail\\trail.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

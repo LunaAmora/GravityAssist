@@ -1,13 +1,13 @@
 
 {
-    "name": "room0",
+    "name": "space_room",
     "id": "6115ee8f-ac56-4926-a377-53b1df7f6ca3",
     "creationCodeFile": "",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-
+        "f066fe53-7c11-43dc-9213-07247c1b66b2"
     ],
     "IsDnD": false,
     "layers": [
@@ -25,7 +25,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+                {"name": "inst_4F1DFAF6","id": "f066fe53-7c11-43dc-9213-07247c1b66b2","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4F1DFAF6","objId": "aa8c5827-6482-4746-bf04-83eb13c8c7ee","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 0,"y": 0}
             ],
             "layers": [
 
@@ -43,7 +43,7 @@
             "id": "1ad8c197-0a19-48f4-aebf-690293630769",
             "animationFPS": 15,
             "animationSpeedType": "0",
-            "colour": { "Value": 4278190080 },
+            "colour": { "Value": 4286544731 },
             "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
@@ -79,9 +79,9 @@
         "id": "c44dd764-6882-49bc-8f1f-7250eed1a142",
         "inheritPhysicsSettings": false,
         "modelName": "GMRoomPhysicsSettings",
-        "PhysicsWorld": false,
+        "PhysicsWorld": true,
         "PhysicsWorldGravityX": 0,
-        "PhysicsWorldGravityY": 10,
+        "PhysicsWorldGravityY": 0,
         "PhysicsWorldPixToMeters": 0.1,
         "mvc": "1.0"
     },
@@ -92,7 +92,7 @@
         "modelName": "GMRoomSettings",
         "persistent": false,
         "mvc": "1.0",
-        "Width": 1024
+        "Width": 1366
     },
     "mvc": "1.0",
     "views": [
