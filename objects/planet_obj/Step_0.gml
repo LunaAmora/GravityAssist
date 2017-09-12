@@ -1,4 +1,4 @@
-if ((active) && (instance_exists(spaceship_obj))) {
+if (instance_exists(spaceship_obj)) {
 	
 	distance_to_ship = point_distance(x, y, spaceship_obj.x, spaceship_obj.y);
 	if (distance_to_ship <= gravity_distance)
