@@ -11,6 +11,10 @@ if (place_meeting(x, y, objective_obj)){
 	control.win = true;
 	phy_speed_x *= 0.95;
 	phy_speed_y *= 0.95;
+	if phy_speed < 0.1{
+		phy_speed_x = 0;
+		phy_speed_y = 0;
+	}
 }
 
 if (control.dev_mode){
