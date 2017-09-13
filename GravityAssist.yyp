@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "7e9ccd6f-625a-4eda-87f9-daf9c5744825",
+            "Value": {
+                "id": "0cc9fc4d-1154-4fb5-b5c0-c3295bc4cc7d",
+                "resourcePath": "fonts\\big_font\\big_font.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "82bc3897-8aaa-4472-b78a-e7600db9925e",
             "Value": {
                 "id": "688c432a-6f83-407f-af26-8080e28428bd",
@@ -260,6 +268,14 @@
                 "id": "3d68bdc3-2a05-43d0-973d-d97a3352b8f9",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cddb1f3a-01fc-4a45-9070-d7f08b39f7de",
+            "Value": {
+                "id": "35b5a856-42e8-4937-ad5b-4979df20595d",
+                "resourcePath": "fonts\\default_font\\default_font.yy",
+                "resourceType": "GMFont"
             }
         },
         {
