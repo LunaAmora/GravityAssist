@@ -45,11 +45,9 @@ if keyboard_check_pressed(vk_escape){
 if keyboard_check_pressed(vk_space){
 	if (!edit_mode){
 		reset_scr();
-		edit_mode = true;
 	}
 	else{
 		play_scr();
-		edit_mode = false;
 		
 	}
 }

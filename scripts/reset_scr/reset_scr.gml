@@ -6,3 +6,5 @@ with (spaceship_obj){
 }
 
 with(trail_obj) instance_destroy();
+
+control.edit_mode = true;
