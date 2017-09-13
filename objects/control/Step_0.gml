@@ -49,34 +49,12 @@ if keyboard_check_pressed(vk_space){
 	}
 }
 
-if keyboard_check_pressed(ord("1")){
-	change_level_scr(0);
+if keyboard_check_pressed(vk_right) && current_level < (number_of_levels-1){
+	change_level_scr(current_level + 1);
 }
-if keyboard_check_pressed(ord("2")){
-	change_level_scr(1);
+if keyboard_check_pressed(vk_left) && current_level > 0{
+	change_level_scr(current_level - 1);
 }
-if keyboard_check_pressed(ord("3")){
-	change_level_scr(2);
-}
-if keyboard_check_pressed(ord("4")){
-	change_level_scr(3);
-}
-if keyboard_check_pressed(ord("5")){
-	change_level_scr(4);
-}
-if keyboard_check_pressed(ord("6")){
-	change_level_scr(5);
-}
-if keyboard_check_pressed(ord("7")){
-	change_level_scr(6);
-}
-if keyboard_check_pressed(ord("8")){
-	change_level_scr(7);
-}
-if keyboard_check_pressed(ord("9")){
-	change_level_scr(8);
-}
-
 
 if keyboard_check_pressed(vk_backspace){
 	game_restart();
