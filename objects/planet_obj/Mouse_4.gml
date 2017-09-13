@@ -1,3 +1,3 @@
-if (control.edit_mode) && (control.distance_is_active[control.current_level]){
+if ((control.edit_mode) && (control.distance_is_active[control.current_level]) || (control.dev_mode)){
 	editing = true;
 }
