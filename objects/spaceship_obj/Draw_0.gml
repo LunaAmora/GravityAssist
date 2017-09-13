@@ -10,4 +10,4 @@ if (editing){
 }
 
 draw_sprite_ext(sprite_index, -1, x, y, 1, 1, angle, c_white, 1);
-draw_text(15, 30, "Impulse: " + string(ship_impulse));
+if (control.dev_mode) draw_text(15, 30, "Impulse: " + string(ship_impulse));
