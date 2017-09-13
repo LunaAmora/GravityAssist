@@ -1,12 +1,25 @@
-if (!control.edit_mode) draw_set_color(c_orange);
-else draw_set_color(c_white);
-
 draw_self();
+
+if (!control.edit_mode) || (!control.force_is_active[control.current_level]){
+	draw_set_color(c_orange);
+}
+else{
+	draw_set_color(c_white);
+}
+
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 draw_text(x, y, string(density));
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+draw_set_color(c_white);
+
+if (!control.edit_mode) || (!control.distance_is_active[control.current_level]){
+	draw_set_color(c_orange);
+}
+else{
+	draw_set_color(c_white);
+}
 
 draw_circle(x, y, gravity_distance, true);
 draw_set_color(c_white);
