@@ -1,1 +1,3 @@
-editing = true;
+if (control.dev_mode){
+	editing = true;
+}

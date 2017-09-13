@@ -1,1 +1,3 @@
-instance_destroy();
+if (control.dev_mode){
+	instance_destroy();
+}

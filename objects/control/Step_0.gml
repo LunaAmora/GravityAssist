@@ -2,15 +2,20 @@ if (level_load[current_level] != true){
 	load_level_scr(current_level);
 	level_load[current_level] = true;
 }
+if (dev_mode){
+	if keyboard_check_pressed(vk_enter){
+		save_level_scr(current_level);
+	}
 
-if keyboard_check_pressed(vk_enter){
-	save_level_scr(current_level);
+	if mouse_check_button_pressed(mb_middle){
+		creating = true;
+	}
 }
 
-if mouse_check_button_pressed(mb_middle){
-	creating = true;
+if keyboard_check_pressed(vk_tab){
+	if (dev_mode) dev_mode = false;
+	else dev_mode = true;
 }
-
 if (creating == true) && (mouse_check_button_released(mb_middle)){
 	m_distance = point_distance(x, y, mouse_x, mouse_y);
 	new = instance_create_layer(x, y, "Instances", planet_obj);
