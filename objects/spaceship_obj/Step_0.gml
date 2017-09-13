@@ -7,7 +7,11 @@ if (editing){
 
 if (!control.edit_mode) instance_create_depth(x, y, 10, trail_obj);
 
-if (place_meeting(x, y, objective_obj)) control.win = true;
+if (place_meeting(x, y, objective_obj)){
+	control.win = true;
+	phy_speed_x *= 0.95;
+	phy_speed_y *= 0.95;
+}
 
 if (control.dev_mode){
 	if keyboard_check_pressed(ord("P")){
