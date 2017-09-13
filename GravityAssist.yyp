@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "3cb707ef-184f-45b1-a1eb-5e901cf064aa",
+            "Value": {
+                "id": "44a13ff0-dc56-4e30-8e54-3d13447b5c48",
+                "resourcePath": "scripts\\save_level_scr\\save_level_scr.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4d085cf5-8a19-4389-8c06-3ea479f8ff10",
             "Value": {
                 "id": "b3e226d6-da96-4a0e-937c-41aab37f6c43",
@@ -231,6 +239,22 @@
             }
         },
         {
+            "Key": "db45167b-23d9-431e-8c6c-a123f618e158",
+            "Value": {
+                "id": "374e8a7a-dce6-4ffc-be04-69b04f7392f2",
+                "resourcePath": "scripts\\load_level_scr\\load_level_scr.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dc762ba6-a487-4bfe-9028-5bad3d74b4b0",
+            "Value": {
+                "id": "843d67f3-5d05-43b8-9a70-3bc357070886",
+                "resourcePath": "scripts\\change_level_scr\\change_level_scr.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e7c8e386-1a72-4b8c-bd71-496b6469d63d",
             "Value": {
                 "id": "9504dae9-f3c9-49b0-af38-622d425f9ef0",
@@ -264,7 +288,9 @@
         }
     ],
     "script_order": [
-        
+        "db45167b-23d9-431e-8c6c-a123f618e158",
+        "3cb707ef-184f-45b1-a1eb-5e901cf064aa",
+        "dc762ba6-a487-4bfe-9028-5bad3d74b4b0"
     ],
     "tutorial": ""
 }
