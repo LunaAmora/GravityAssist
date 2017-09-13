@@ -6,12 +6,9 @@ for (i = 0; i < array_length_1d(Planets_id); i++){
 }
 ship_x = ini_read_real(string(level), "ship_x", 0);
 ship_y = ini_read_real(string(level), "ship_y", 0);
-ship_angle = ini_read_real(string(level), "ship_angle", 0);
-ship_impulse = ini_read_real(string(level), "ship_impulse", 0);
 ship = instance_create_layer(ship_x, ship_y, "Instances", spaceship_obj);
-with (ship){
-	physics_apply_impulse(x, y, other.ship_impulse * cos(radtodeg(other.ship_angle)), other.ship_impulse * sin(radtodeg(other.ship_angle)))
-}
+ship.phy_rotation = ini_read_real(string(level), "ship_angle", 0);
+ship.ship_impulse = ini_read_real(string(level), "ship_impulse", 0);
 	
 for(i = 0; i < number_of_planets[level]; i++){
 	x_pos = ini_read_real(string(level)+"_"+string(i), "x_pos", 0);

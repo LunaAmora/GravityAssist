@@ -1,4 +1,8 @@
 draw_self();
+draw_set_halign(fa_center);
+draw_text(x, y, string(density));
+draw_set_halign(fa_left);
+
 draw_circle(x, y, gravity_distance, true);
 if editing == true{
 	edit_circle = point_distance(x, y, mouse_x, mouse_y);

@@ -1,4 +1,4 @@
-if (level_load[current_level] != true){ //Carrega o level atual se o mesmo não foi carregado ainda
+if (level_load[current_level] != true){ 
 	load_level_scr(current_level);
 	level_load[current_level] = true;
 }
@@ -37,12 +37,46 @@ if keyboard_check_pressed(vk_escape){
 	game_end();
 }
 
+if keyboard_check_pressed(vk_space){
+	if (!reseted){
+		reset_scr();
+		reseted = true;
+	}
+	else{
+		play_scr();
+		reseted = false;
+		
+	}
+}
+
 if keyboard_check_pressed(ord("1")){
 	change_level_scr(0);
 }
 if keyboard_check_pressed(ord("2")){
-	change_level_scr(1)
+	change_level_scr(1);
 }
+if keyboard_check_pressed(ord("3")){
+	change_level_scr(2);
+}
+if keyboard_check_pressed(ord("4")){
+	change_level_scr(3);
+}
+if keyboard_check_pressed(ord("5")){
+	change_level_scr(4);
+}
+if keyboard_check_pressed(ord("6")){
+	change_level_scr(5);
+}
+if keyboard_check_pressed(ord("7")){
+	change_level_scr(6);
+}
+if keyboard_check_pressed(ord("8")){
+	change_level_scr(7);
+}
+if keyboard_check_pressed(ord("9")){
+	change_level_scr(8);
+}
+
 
 if keyboard_check_pressed(vk_backspace){
 	game_restart();

@@ -21,3 +21,7 @@ if editing = true && mouse_check_button_released(mb_left){
 	gravity_distance = point_distance(x, y, mouse_x, mouse_y);
 	editing = false;
 }
+
+if place_meeting(x, y, control){
+	density += mouse_wheel_up() - mouse_wheel_down();
+}

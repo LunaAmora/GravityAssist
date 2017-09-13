@@ -1,5 +1,6 @@
 win = false;
 creating = false;
+reseted = false;
 
 for (i= 0; i < 10; i++){
 	Planets_id[i] = 0;
