@@ -38,13 +38,13 @@ if keyboard_check_pressed(vk_escape){
 }
 
 if keyboard_check_pressed(vk_space){
-	if (!reseted){
+	if (!edit_mode){
 		reset_scr();
-		reseted = true;
+		edit_mode = true;
 	}
 	else{
 		play_scr();
-		reseted = false;
+		edit_mode = false;
 		
 	}
 }

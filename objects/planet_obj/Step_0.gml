@@ -3,7 +3,7 @@ image_yscale = size;
 if (instance_exists(spaceship_obj)) {
 	
 	distance_to_ship = point_distance(x, y, spaceship_obj.x, spaceship_obj.y);
-	if (distance_to_ship <= gravity_distance)
+	if (distance_to_ship <= gravity_distance && !control.edit_mode)
 	{
 		active = true;
 		direc_to_ship = point_direction(x, y, spaceship_obj.x, spaceship_obj.y)

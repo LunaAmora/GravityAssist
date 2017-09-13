@@ -4,3 +4,5 @@ with (spaceship_obj){
 	ship.ship_impulse = ship_impulse;
 	instance_destroy();
 }
+
+with(trail_obj) instance_destroy();
