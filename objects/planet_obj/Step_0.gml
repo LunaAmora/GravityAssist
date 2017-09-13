@@ -17,10 +17,12 @@ if (instance_exists(spaceship_obj)) {
 	else active = false;
 }
 
-if ((editing = true) || (control.dev_mode)) && mouse_check_button_released(mb_left){
+if (editing = true) && mouse_check_button_released(mb_left){
 	gravity_distance = point_distance(x, y, mouse_x, mouse_y);
 	editing = false;
 }
 if (((control.force_is_active[control.current_level]) && (control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control)){
-	density += mouse_wheel_up() - mouse_wheel_down();
+	if keyboard_check(vk_shift) multiplyer = 10;
+	else multiplyer = 1;
+	density += (mouse_wheel_up() - mouse_wheel_down()) * multiplyer;
 }
