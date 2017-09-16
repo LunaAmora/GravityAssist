@@ -1,3 +1,7 @@
+if (default_rot == -1){
+	default_rot = phy_rotation;
+}
+else phy_rotation = default_rot;
 if (editing){
 	phy_rotation = point_direction(x, y, mouse_x, mouse_y);
 	if mouse_check_button_released(mb_left){
@@ -5,16 +9,16 @@ if (editing){
 	}
 }
 
-if (!control.edit_mode) instance_create_depth(x, y, 10, trail_obj);
+if (!control.edit_mode) && (!control.win) instance_create_depth(x, y, 10, trail_obj);
 
 if (place_meeting(x, y, objective_obj)){
 	control.win = true;
-	phy_speed_x *= 0.95;
-	phy_speed_y *= 0.95;
-	if phy_speed < 0.1{
-		phy_speed_x = 0;
-		phy_speed_y = 0;
-	}
+	phy_speed_x *= 0.96;
+	phy_speed_y *= 0.96;
+	decay = 0.005;
+	image_alpha -= decay / 2;
+	image_xscale -= decay / 2;
+	image_yscale = image_xscale;
 }
 
 if (control.dev_mode){

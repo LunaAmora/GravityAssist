@@ -1,4 +1,4 @@
-if (phy_speed != 0){
+if (phy_speed != 0)  && (!control.win) {
 	angle = point_direction(x, y, x + phy_speed_x, y + phy_speed_y);
 }
 else{
@@ -9,8 +9,9 @@ if (editing){
 	draw_line(x, y, mouse_x, mouse_y)
 }
 
-draw_sprite_ext(sprite_index, -1, x, y, 1, 1, angle, c_white, 1);
+draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, angle, c_white, image_alpha);
 if (control.dev_mode) draw_text(15, 30, "Impulse: " + string(ship_impulse));
+draw_text(15, 30, "rot: " + string(phy_rotation));
 
 /*
 dist1 = point_distance(x, y, 0, 0)
