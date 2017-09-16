@@ -43,12 +43,19 @@ if keyboard_check_pressed(vk_escape){
 }
 
 if keyboard_check_pressed(vk_space){
-	if (!edit_mode){
-		reset_scr();
+	if ((win) && (!dev_mode)){
+		if current_level < (number_of_levels-1){
+			change_level_scr(current_level + 1);
+		}
 	}
 	else{
-		play_scr();
+		if (!edit_mode){
+			reset_scr();
+		}
+		else{
+			play_scr();
 		
+		}
 	}
 }
 

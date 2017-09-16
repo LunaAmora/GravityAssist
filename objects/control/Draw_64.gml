@@ -4,6 +4,10 @@ if (dev_mode)
 	big_text = "DEVELOPER MODE"
 	small_text = "[space] to toggle"
 }
+else if (win){
+	big_text = "LEVEL COMPLETE"
+	small_text = "[space] to next level"
+}	
 else if (edit_mode)
 {
 	big_text = "EDIT MODE"
