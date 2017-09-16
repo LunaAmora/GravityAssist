@@ -1,7 +1,3 @@
-if (default_rot == -1){
-	default_rot = phy_rotation;
-}
-else phy_rotation = default_rot;
 if (editing){
 	phy_rotation = point_direction(x, y, mouse_x, mouse_y);
 	if mouse_check_button_released(mb_left){
