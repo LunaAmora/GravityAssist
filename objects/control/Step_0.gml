@@ -49,6 +49,7 @@ if keyboard_check_pressed(vk_space){
 		}
 	}
 	else{
+		if (win) win  = (!win);
 		if (!edit_mode){
 			reset_scr();
 		}

@@ -11,10 +11,10 @@ if (place_meeting(x, y, objective_obj)){
 	control.win = true;
 	phy_speed_x *= 0.96;
 	phy_speed_y *= 0.96;
-	decay = 0.005;
-	image_alpha -= decay / 2;
-	image_xscale -= decay / 2;
-	image_yscale = image_xscale;
+//	decay = 0.005;
+//	image_alpha -= decay / 2;
+//	image_xscale -= decay / 2;
+//	image_yscale = image_xscale;
 }
 
 if (control.dev_mode){
