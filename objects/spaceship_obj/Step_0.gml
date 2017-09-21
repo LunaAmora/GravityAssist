@@ -5,7 +5,7 @@ if (editing){
 	}
 }
 
-if (!control.edit_mode) && (!control.win) instance_create_depth(x, y, 10, trail_obj);
+if (!control.edit_mode) && (!control.win) instance_create_layer(x, y, "SFX1", trail_obj);
 
 if (place_meeting(x, y, objective_obj)){
 	control.win = true;

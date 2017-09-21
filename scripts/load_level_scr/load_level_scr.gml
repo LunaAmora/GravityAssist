@@ -29,6 +29,6 @@ for(i = 0; i < number_of_planets[level]; i++){
 	
 objective_x = ini_read_real(string(level), "objective_x", 0);
 objective_y = ini_read_real(string(level), "objective_y", 0);
-if (objective_x*objective_y != 0) instance_create_layer(objective_x, objective_y, "Instances", objective_obj);
+if (objective_x*objective_y != 0) instance_create_layer(objective_x, objective_y, "Objective", objective_obj);
 	
 ini_close();
