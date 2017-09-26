@@ -2,6 +2,7 @@ win = false;
 creating = false;
 edit_mode = true;
 dev_mode = false;
+time = 0;
 window_set_fullscreen(true);
 
 for (i= 0; i < 10; i++){

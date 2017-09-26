@@ -29,5 +29,8 @@ draw_set_font(default_font);
 	
 draw_text(room_width / 2, 75, small_text);
 if (win) draw_text(room_width / 2, room_height - 55, "<= Change Levels =>");
-	
+
+draw_set_halign(fa_right);
+seconds = (time div room_speed);
+draw_text(room_width-15, 15, "Time: " + string(seconds div 60) + ":" + string((seconds mod 60) div 10) + string((seconds mod 60) mod 10));
 draw_set_halign(fa_left);

@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "a4128504-478f-4006-9d69-d2af594ca18f",
+            "Value": {
+                "id": "cb925708-6259-48a1-bba9-66727a5d6e3f",
+                "resourcePath": "objects\\objective_ring_obj\\objective_ring_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "b9492635-a208-482a-9b5b-87ace265b98f",

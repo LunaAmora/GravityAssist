@@ -9,9 +9,16 @@ else{
 
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
-draw_text(x, y, string(density));
+
+if (atmosphere_editing){
+	draw_text(x, y, string(atmosphere_force));
+}
+else draw_text(x, y, string(density));
+
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
 draw_set_color(c_white);
 
 if (!control.edit_mode) || (!control.distance_is_active[control.current_level]){
@@ -22,6 +29,8 @@ else{
 }
 
 draw_circle(x, y, gravity_distance, true);
+draw_set_color(c_purple);
+draw_circle(x, y, atmosphere_distance, true);
 draw_set_color(c_white);
 
 if editing == true{

@@ -51,7 +51,7 @@ if keyboard_check_pressed(vk_space){
 	else{
 		if (win) win  = (!win);
 		if (!edit_mode){
-			reset_scr();
+			reset_scr(0,0);
 		}
 		else{
 			play_scr();
@@ -70,3 +70,7 @@ if keyboard_check_pressed(vk_left) && current_level > 0{
 if keyboard_check_pressed(vk_backspace) game_restart();
 
 if keyboard_check_pressed(vk_f12) window_set_fullscreen (!window_get_fullscreen());
+
+if (!edit_mode) && (!win){
+	time++;
+}
