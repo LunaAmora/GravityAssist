@@ -9,7 +9,3 @@ atmosphere_editing = 0;
 control.Planets_id[instance_number(planet_obj)-1] = id;
 
 editing = false;
-
-ring_created = false;
-has_ring = 0;
-ring_pos = 0;

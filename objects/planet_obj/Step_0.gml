@@ -1,15 +1,6 @@
 image_xscale = size;
 image_yscale = size;
-if (has_ring){
-	if (!ring_created){
-		ring_a = instance_create_layer(x + cos(degtorad(ring_pos))*sprite_height/2, y - sin(degtorad(ring_pos))*sprite_height/2, "Instances", objective_ring_obj);
-		ring_b = instance_create_layer(x + cos(degtorad(ring_pos))*gravity_distance, y - sin(degtorad(ring_pos))*gravity_distance, "Instances", objective_ring_obj);
-		ring_a.owner = id;
-		ring_a.first = true;
-		ring_b.owner = id;
-		ring_created = true;
-	}
-}
+
 atmosphere_editing = keyboard_check(vk_control);
 
 if (instance_exists(spaceship_obj)) && (!control.win){

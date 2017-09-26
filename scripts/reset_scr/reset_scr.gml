@@ -28,7 +28,7 @@ with(trail_obj) instance_destroy();
 control.edit_mode = true;
 
 if instance_exists(objective_ring_obj){
-	with(objective_obj){
+	with(objective_ring_obj){
 		passed = false;
 	}
 }

@@ -69,6 +69,12 @@ if keyboard_check_pressed(vk_left) && current_level > 0{
 
 if keyboard_check_pressed(vk_backspace) game_restart();
 
+if (dev_mode){
+	if keyboard_check_pressed(vk_alt){
+		instance_create_layer(x, y, "Instances", objective_ring_obj);
+	}
+}
+
 if keyboard_check_pressed(vk_f12) window_set_fullscreen (!window_get_fullscreen());
 
 if (!edit_mode) && (!win){
