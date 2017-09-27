@@ -1,7 +1,8 @@
 image_xscale = size;
 image_yscale = size;
 
-atmosphere_editing = keyboard_check(vk_control);
+
+if keyboard_check_pressed(vk_control) mode_editing = (!mode_editing);
 
 if (instance_exists(spaceship_obj)) && (!control.win){
 	
@@ -29,17 +30,19 @@ if (instance_exists(spaceship_obj)) && (!control.win){
 }
 
 if (editing = true) && mouse_check_button_released(mb_left){
-	if (atmosphere_editing){
-		atmosphere_distance = point_distance(x, y, mouse_x, mouse_y);
+	if (!mode_editing){
+		if (point_distance(x, y, mouse_x, mouse_y) <= gravity_distance) || (control.dev_mode) || (gravity_distance < sprite_height/2){
+			atmosphere_distance = point_distance(x, y, mouse_x, mouse_y);
+		}
+		else atmosphere_distance = gravity_distance;
 	}
 	else gravity_distance = point_distance(x, y, mouse_x, mouse_y);
 	editing = false;
 }
+
 if (((control.force_is_active[control.current_level]) && (control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control)){
-	if keyboard_check(vk_shift) multiplyer = 10;
-	else multiplyer = 1;
-	if (atmosphere_editing){
-		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * multiplyer;
+	if (!mode_editing){
+		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
 	}
-	else density += (mouse_wheel_up() - mouse_wheel_down()) * multiplyer;
+	else density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
 }

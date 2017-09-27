@@ -1,4 +1,5 @@
 draw_text(15, 15, "Level: " + string(current_level+1));
+
 if (dev_mode)
 {
 	big_text = "DEVELOPER MODE"

@@ -18,17 +18,19 @@ if keyboard_check_pressed(vk_tab){
 }
 if (creating == true) && (mouse_check_button_released(mb_middle)){
 	m_distance = point_distance(x, y, mouse_x, mouse_y);
-	new = instance_create_layer(x, y, "Instances", planet_obj);
-		
-	if m_distance < 16 m_distance = 16;
+	if (m_distance > 1){
+		new = instance_create_layer(x, y, "Instances", planet_obj);
 	
-	new.size = 	m_distance/16;
+		if m_distance < 16 m_distance = 16;
 	
-	fix = physics_fixture_create();
-	physics_fixture_set_circle_shape(fix, m_distance);
-	physics_fixture_set_density(fix, 0);
-	my_fix = physics_fixture_bind(fix, new);
-	physics_fixture_delete(fix);
+		new.size = 	m_distance/16;
+	
+		fix = physics_fixture_create();
+		physics_fixture_set_circle_shape(fix, m_distance);
+		physics_fixture_set_density(fix, 0);
+		my_fix = physics_fixture_bind(fix, new);
+		physics_fixture_delete(fix);
+	}
 	
 	creating = false;
 }
@@ -70,7 +72,7 @@ if keyboard_check_pressed(vk_left) && current_level > 0{
 if keyboard_check_pressed(vk_backspace) game_restart();
 
 if (dev_mode){
-	if keyboard_check_pressed(vk_alt){
+	if keyboard_check_pressed(ord("I")){
 		instance_create_layer(x, y, "Instances", objective_ring_obj);
 	}
 }

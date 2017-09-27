@@ -26,10 +26,14 @@ else{
 		if (other.objective_id == objective_id){
 			other.x = x + cos(degtorad(angle))*dist;
 			other.y = y - sin(degtorad(angle))*dist;
+			if collision_line(x, y, other.x, other.y, spaceship_obj, false, true){
+				passed = true;
+			}
 		}
 	}
 }
 if place_meeting(x, y, control){
+	if (first) angle += (mouse_wheel_up() - mouse_wheel_down())*(1 + keyboard_check(vk_alt)*9);
 	if mouse_check_button(mb_middle){
 		with(objective_ring_obj){
 			if (objective_id == other.objective_id){
@@ -39,3 +43,4 @@ if place_meeting(x, y, control){
 		instance_destroy();
 	}
 }
+

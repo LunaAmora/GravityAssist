@@ -19,6 +19,7 @@ for (i = 0; i < number_of_levels; i++){
 	force_is_active[i] = ini_read_real(string(i), "force_is_active", 0);
 	atmosphere_is_active[i] = ini_read_real(string(i), "atmosphere_is_active", 0);
 	number_of_planets[i] = ini_read_real(string(i), "number_of_planets", 0);
+	number_of_objectives[i] = ini_read_real(string(i), "number_of_objectives", 0);
 }
 
 ini_close();

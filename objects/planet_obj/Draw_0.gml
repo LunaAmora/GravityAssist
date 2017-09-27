@@ -10,7 +10,7 @@ else{
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
-if (atmosphere_editing){
+if (!mode_editing){
 	draw_text(x, y, string(atmosphere_force));
 }
 else draw_text(x, y, string(density));
@@ -28,14 +28,15 @@ else{
 	draw_set_color(c_white);
 }
 
-draw_circle(x, y, gravity_distance, true);
+if (gravity_distance >= sprite_height/2) draw_circle(x, y, gravity_distance, true);
 draw_set_color(c_purple);
-draw_circle(x, y, atmosphere_distance, true);
+if (atmosphere_distance >= sprite_height/2) draw_circle(x, y, atmosphere_distance, true);
 draw_set_color(c_white);
 
 if editing == true{
 	edit_circle = point_distance(x, y, mouse_x, mouse_y);
 	draw_set_color(c_yellow);
-	draw_circle(x, y, edit_circle, true);
+	if (!mode_editing) && (edit_circle > gravity_distance) && (gravity_distance > sprite_height/2) draw_circle(x, y, gravity_distance, true);
+	else draw_circle(x, y, edit_circle, true);
 	draw_set_color(c_white);
 }
