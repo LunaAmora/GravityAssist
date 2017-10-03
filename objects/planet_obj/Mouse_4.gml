@@ -1,3 +1,3 @@
-if ((control.edit_mode) && (control.distance_is_active[control.current_level]) || (control.dev_mode)){
+if ((control.edit_mode) && ((gravityDistance_is_editable && mode_editing) || (atmosphereDistance_is_editable && !mode_editing)) || (control.dev_mode)){
 	editing = true;
 }

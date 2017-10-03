@@ -1,14 +1,10 @@
 level = argument0;
+//if instance_exists(spaceship_obj){
+//	coll = (spaceship_obj.angle/360)*255;
+//}
+coll = 255*current_level/10;
 
-switch (level+1)
-{
-	case 1:
-	draw_set_color(c_navy);
-	break;
-	default:
-	draw_set_color(c_teal);
-	break;
-}
+draw_set_color(make_color_hsv((coll + col) mod 255,(255),(255)));
 
 draw_rectangle(0, 0, room_width, room_height, false);
 draw_set_color(c_white);

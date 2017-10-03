@@ -1,3 +1,7 @@
+//ilusion_ x = x >= 0 ? x mod room_width: (x + (abs(x) div room_width + 1)*room_width) mod room_width;
+//ilusion_ y = y >= 0 ? y mod room_height: (y + (abs(y) div room_height + 1)*room_height) mod room_height;
+
+
 if (editing){
 	phy_rotation = point_direction(x, y, mouse_x, mouse_y);
 	if mouse_check_button_released(mb_left){
@@ -28,3 +32,4 @@ if (control.dev_mode){
 		ship_impulse += mouse_wheel_up() - mouse_wheel_down();
 	}
 }
+

@@ -19,6 +19,9 @@ for(i = 0; i < number_of_planets[level]; i++){
 	new_planet.gravity_distance = ini_read_real(string(level)+"_"+string(i), "gravity_distance", 0);
 	new_planet.atmosphere_distance = ini_read_real(string(level)+"_"+string(i), "atmosphere_distance", 0);
 	new_planet.atmosphere_velocity = ini_read_real(string(level)+"_"+string(i), "atmosphere_velocity", 1000);
+	
+	new_planet.typeA = ini_read_real(string(level)+"_"+string(i), "typeA", 0);
+	new_planet.typeG = ini_read_real(string(level)+"_"+string(i), "typeG", 1);
 		
 	fix = physics_fixture_create();
 	physics_fixture_set_circle_shape(fix, new_planet.size*16);

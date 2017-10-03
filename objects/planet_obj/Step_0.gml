@@ -1,6 +1,27 @@
 image_xscale = size;
 image_yscale = size;
 
+switch (typeG){
+	case 1: gravityDistance_is_editable = true;
+			gravityForce_is_editable = true;
+		break; //tudo editável
+	case 2: gravityDistance_is_editable = true;
+		break; //apenas distancia gravitacional
+	case 3: gravityForce_is_editable = true;
+		break; //apenas força gravitacional
+	case 0: break; //nada editável
+}
+switch (typeA){
+	case 1: atmosphereDistance_is_editable = true;
+			atmosphereForce_is_editable = true;
+		break; //tudo editável
+	case 2: atmosphereDistance_is_editable = true;
+		break; //apenas distancia atmosférica
+	case 3: atmosphereForce_is_editable = true;
+		break; //apenas força atmosférica
+	case 0: break; //nada editável
+}
+
 
 if keyboard_check_pressed(vk_control) mode_editing = (!mode_editing);
 
@@ -40,9 +61,11 @@ if (editing = true) && mouse_check_button_released(mb_left){
 	editing = false;
 }
 
-if (((control.force_is_active[control.current_level]) && (control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control)){
-	if (!mode_editing){
+if (((control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control)){
+	if (!mode_editing) && (atmosphereForce_is_editable){
 		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
 	}
-	else density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
+	else if (gravityForce_is_editable){
+		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
+	}
 }

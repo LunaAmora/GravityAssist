@@ -1,3 +1,6 @@
+typeG = 1;
+typeA = 0;
+
 active = 1;
 density = 100;
 size = 1;
@@ -12,3 +15,8 @@ mode_editing = true;
 control.Planets_id[instance_number(planet_obj)-1] = id;
 
 editing = false;
+
+gravityForce_is_editable = false;
+gravityDistance_is_editable = false;
+atmosphereForce_is_editable = false;
+atmosphereDistance_is_editable = false;

@@ -30,6 +30,7 @@ list_objectives = ds_priority_create();
 with(objective_ring_obj){
 	if (first) ds_priority_add(other.list_objectives, id, id);
 }
+
 while (!ds_priority_empty(list_objectives)){
 	objective = ds_priority_delete_min(list_objectives);
 	ini_write_real(string(level)+"*"+string(obj_count), "obj_x", objective.x);
