@@ -19,6 +19,8 @@ for (a = 0; a < instance_number(planet_obj); a++){
 			ini_write_real(string(level)+"_"+string(a), "gravity_distance", Planets_id[i].gravity_distance);
 			ini_write_real(string(level)+"_"+string(a), "atmosphere_distance", Planets_id[i].atmosphere_distance);
 			ini_write_real(string(level)+"_"+string(a), "atmosphere_velocity", Planets_id[i].atmosphere_force);
+			ini_write_real(string(level)+"_"+string(a), "typeG", Planets_id[i].typeG)
+			ini_write_real(string(level)+"_"+string(a), "typeA", Planets_id[i].typeA)
 		}
 	}
 }

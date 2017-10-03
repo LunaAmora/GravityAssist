@@ -6,20 +6,28 @@ switch (typeG){
 			gravityForce_is_editable = true;
 		break; //tudo editável
 	case 2: gravityDistance_is_editable = true;
+			gravityForce_is_editable = false;
 		break; //apenas distancia gravitacional
-	case 3: gravityForce_is_editable = true;
+	case 3: gravityDistance_is_editable = false;
+			gravityForce_is_editable = true;
 		break; //apenas força gravitacional
-	case 0: break; //nada editável
+	case 0: gravityDistance_is_editable = false;
+			gravityForce_is_editable = false;
+		break; //nada editável
 }
 switch (typeA){
 	case 1: atmosphereDistance_is_editable = true;
 			atmosphereForce_is_editable = true;
 		break; //tudo editável
 	case 2: atmosphereDistance_is_editable = true;
+			atmosphereForce_is_editable = false;
 		break; //apenas distancia atmosférica
-	case 3: atmosphereForce_is_editable = true;
+	case 3: atmosphereDistance_is_editable = false;
+			atmosphereForce_is_editable = true;
 		break; //apenas força atmosférica
-	case 0: break; //nada editável
+	case 0: atmosphereDistance_is_editable = false;
+			atmosphereForce_is_editable = false;
+		break; //nada editável
 }
 
 
@@ -68,4 +76,14 @@ if (((control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control
 	else if (gravityForce_is_editable){
 		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
 	}
+}
+if ((control.dev_mode) && (place_meeting(x, y, control))){
+	if keyboard_check_pressed(ord("0")) typeG = 0;
+	if keyboard_check_pressed(ord("1")) typeG = 1;
+	if keyboard_check_pressed(ord("2")) typeG = 2;
+	if keyboard_check_pressed(ord("3")) typeG = 3;
+	if keyboard_check_pressed(ord("9")) typeA = 0;
+	if keyboard_check_pressed(ord("4")) typeA = 1;
+	if keyboard_check_pressed(ord("5")) typeA = 2;
+	if keyboard_check_pressed(ord("6")) typeA = 3;
 }
