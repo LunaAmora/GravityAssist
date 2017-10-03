@@ -1,4 +1,7 @@
-draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_hsv((control.coll + control.col  + 128) mod 255,(255),(255)), image_alpha);
+draw_set_color(make_color_hsv((control.coll + control.col  + 128) mod 255,(255),(255)))
+draw_circle(x, y, sprite_height/2, false)
+draw_set_color(c_white);
+//draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_hsv((control.coll + control.col  + 128) mod 255,(255),(255)), image_alpha);
 
 if (!control.edit_mode) || (!gravityForce_is_editable){
 	draw_set_color(make_color_hsv((control.coll + control.col) mod 255,(255),(255)));
