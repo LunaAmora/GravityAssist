@@ -6,7 +6,7 @@ draw_circle(x, y, sprite_height/2, false)
 draw_set_color(c_white);
 
 if (!control.edit_mode) || (!gravityForce_is_editable){
-	draw_set_color(make_color_hsv((control.coll + control.col) mod 255,(255),control.hsv_light));
+	draw_set_color(make_color_hsv((control.coll + control.col) mod 255, 255,control.hsv_light));
 }
 else{
 	draw_set_color(c_white);
@@ -39,6 +39,7 @@ if (atmosphere_distance >= sprite_height/2) draw_circle(x, y, atmosphere_distanc
 draw_set_color(c_white);
 
 if editing == true{
+	draw_set_circle_precision(8);
 	edit_circle = point_distance(x, y, mouse_x, mouse_y);
 	draw_set_color(c_yellow);
 	if (!mode_editing) && (edit_circle > gravity_distance) && (gravity_distance > sprite_height/2) && (!control.dev_mode){
@@ -46,4 +47,5 @@ if editing == true{
 	}
 	else draw_circle(x, y, edit_circle, true);
 	draw_set_color(c_white);
+	draw_set_circle_precision(32);
 }

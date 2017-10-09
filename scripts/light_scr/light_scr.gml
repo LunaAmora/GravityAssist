@@ -21,7 +21,9 @@ outer_clarity = argument7;
 mode = argument8;
 
 draw_set_color(colour);
+
 for (a = 0; a < layers; a++){
+	
 	if (mode) gpu_set_blendmode(bm_add);
 	else gpu_set_blendmode(bm_subtract);
 	

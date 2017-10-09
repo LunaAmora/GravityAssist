@@ -32,3 +32,4 @@ if instance_exists(objective_ring_obj){
 		passed = false;
 	}
 }
+control.time = 0;

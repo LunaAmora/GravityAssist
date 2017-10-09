@@ -1,4 +1,4 @@
-value = 0;
+value = irandom(360);
 editing = false;
 ship_impulse = 0;
 angle = 0;

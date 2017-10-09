@@ -1,4 +1,6 @@
 draw_set_circle_precision(32);
+randomize();
+
 col = irandom(255);
 coll = 0;
 win = false;
@@ -25,12 +27,13 @@ for (i = 0; i < number_of_levels; i++){
 }
 
 ini_close();
+
 /*
 light = instance_create_layer(room_width/2, room_height/2, "Light", light_obj);
 light.inner_radius = 0;
 light.outer_radius = room_width/3;
 light.layers = 1.1;
-light.colour = make_color_hsv(0, 0, 10);
-light.inner_clarity = 10;
+light.colour = make_color_hsv(0, 0, 50);
+light.inner_clarity = 100;
 light.outer_clarity = 0;
 light.mode = false;

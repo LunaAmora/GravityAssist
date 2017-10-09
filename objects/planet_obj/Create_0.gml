@@ -1,6 +1,8 @@
 typeG = 1;
 typeA = 0;
 
+value = irandom(360);
+
 planet_color = c_white;
 
 active = 1;
