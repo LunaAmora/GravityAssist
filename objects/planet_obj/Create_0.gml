@@ -1,6 +1,8 @@
 typeG = 1;
 typeA = 0;
 
+planet_color = c_white;
+
 active = 1;
 density = 100;
 size = 1;
@@ -20,3 +22,5 @@ gravityForce_is_editable = false;
 gravityDistance_is_editable = false;
 atmosphereForce_is_editable = false;
 atmosphereDistance_is_editable = false;
+
+light = instance_create_layer(x, y,"Light", light_obj);

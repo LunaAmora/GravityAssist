@@ -4,7 +4,7 @@ level = argument0;
 //}
 coll = 255*current_level/10;
 
-draw_set_color(make_color_hsv((coll + col) mod 255,(255),(255)));
+draw_set_color(make_color_hsv((coll + col) mod 255,(255), hsv_light));
 
 draw_rectangle(0, 0, room_width, room_height, false);
 draw_set_color(c_white);

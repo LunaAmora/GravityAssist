@@ -1,0 +1,1 @@
+light_scr(x, y, inner_radius, outer_radius, layers, colour, inner_clarity, outer_clarity, mode);

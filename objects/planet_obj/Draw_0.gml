@@ -1,10 +1,12 @@
-draw_set_color(make_color_hsv((control.coll + control.col  + 128) mod 255,(255),(255)))
+planet_color = make_color_hsv((control.coll + control.col  + 128) mod 255, 255, control.hsv_light);
+
+draw_set_color(planet_color)
 draw_circle(x, y, sprite_height/2, false)
+//draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_hsv((control.coll + control.col  + 128) mod 255,(255),control.hsv_light), image_alpha);
 draw_set_color(c_white);
-//draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_hsv((control.coll + control.col  + 128) mod 255,(255),(255)), image_alpha);
 
 if (!control.edit_mode) || (!gravityForce_is_editable){
-	draw_set_color(make_color_hsv((control.coll + control.col) mod 255,(255),(255)));
+	draw_set_color(make_color_hsv((control.coll + control.col) mod 255,(255),control.hsv_light));
 }
 else{
 	draw_set_color(c_white);
@@ -25,7 +27,7 @@ draw_set_valign(fa_top);
 draw_set_color(c_white);
 
 if (!control.edit_mode) || (!gravityDistance_is_editable){
-	draw_set_color(make_color_hsv((control.coll + control.col + 128) mod 255,(255),(255)));
+	draw_set_color(make_color_hsv((control.coll + control.col + 128) mod 255,(255),control.hsv_light));
 }
 else{
 	draw_set_color(c_white);

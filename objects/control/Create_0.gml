@@ -1,3 +1,4 @@
+draw_set_circle_precision(32);
 col = irandom(255);
 coll = 0;
 win = false;
@@ -5,6 +6,7 @@ creating = false;
 edit_mode = true;
 dev_mode = false;
 time = 0;
+hsv_light = 255;
 
 window_set_fullscreen(true);
 
@@ -23,3 +25,12 @@ for (i = 0; i < number_of_levels; i++){
 }
 
 ini_close();
+/*
+light = instance_create_layer(room_width/2, room_height/2, "Light", light_obj);
+light.inner_radius = 0;
+light.outer_radius = room_width/3;
+light.layers = 1.1;
+light.colour = make_color_hsv(0, 0, 10);
+light.inner_clarity = 10;
+light.outer_clarity = 0;
+light.mode = false;

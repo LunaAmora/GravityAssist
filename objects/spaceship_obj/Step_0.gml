@@ -13,12 +13,14 @@ if (!control.edit_mode) && (!control.win) instance_create_layer(x, y, "SFX1", tr
 
 if (place_meeting(x, y, objective_obj)){
 	control.win = true;
+}
+if (control.win){
 	phy_speed_x *= 0.96;
 	phy_speed_y *= 0.96;
-//	decay = 0.005;
-//	image_alpha -= decay / 2;
-//	image_xscale -= decay / 2;
-//	image_yscale = image_xscale;
+	decay = 0.005;
+	image_alpha -= decay / 2;
+	image_xscale -= decay / 2;
+	image_yscale = image_xscale;
 }
 
 if (control.dev_mode){
@@ -32,4 +34,3 @@ if (control.dev_mode){
 		ship_impulse += mouse_wheel_up() - mouse_wheel_down();
 	}
 }
-

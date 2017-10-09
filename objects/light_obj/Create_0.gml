@@ -1,0 +1,10 @@
+light_x = 0;
+light_y = 0;
+inner_radius = 0;
+outer_radius = 0;
+layers = 1;
+colour = c_white;
+inner_clarity = 0;
+outer_clarity = 0;
+mode = true;
+owner = "other";
