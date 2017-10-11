@@ -40,9 +40,7 @@ if !mouse_check_button(mb_middle){
 	y = mouse_y;
 }
 
-if keyboard_check_pressed(vk_escape){
-	game_end();
-}
+
 
 if keyboard_check_pressed(vk_space){
 	if ((win) && (!dev_mode)){
@@ -69,15 +67,11 @@ if keyboard_check_pressed(vk_left) && current_level > 0{
 	change_level_scr(current_level - 1);
 }
 
-if keyboard_check_pressed(vk_backspace) room_restart();
-
 if (dev_mode){
 	if keyboard_check_pressed(ord("I")){
 		instance_create_layer(x, y, "Instances", objective_ring_obj);
 	}
 }
-
-if keyboard_check_pressed(vk_f12) window_set_fullscreen (!window_get_fullscreen());
 
 if (!edit_mode) && (!win){
 	time++;
