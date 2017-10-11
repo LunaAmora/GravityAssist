@@ -28,7 +28,7 @@ if (first){
 }
 
 if place_meeting(x, y, control){
-	if (first) angle += (mouse_wheel_up() - mouse_wheel_down())*(1 + keyboard_check(vk_alt)*9);
+	if (first) angle += (mouse_wheel_up() - mouse_wheel_down())*(1 + keyboard_check(vk_shift)*9);
 	if mouse_check_button(mb_middle){
 		instance_destroy();
 	}
