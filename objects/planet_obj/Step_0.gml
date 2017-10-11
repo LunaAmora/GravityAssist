@@ -71,10 +71,10 @@ if (editing = true) && mouse_check_button_released(mb_left){
 
 if (((control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control)){
 	if (!mode_editing) && (atmosphereForce_is_editable){
-		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
+		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
 	else if (gravityForce_is_editable){
-		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_alt)*9);;
+		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
 }
 if ((control.dev_mode) && (place_meeting(x, y, control))){
