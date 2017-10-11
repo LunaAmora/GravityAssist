@@ -8,3 +8,5 @@ inner_clarity = 0;
 outer_clarity = 0;
 mode = true;
 owner = "other";
+variation = 0;
+var_counter = 0;

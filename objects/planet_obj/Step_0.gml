@@ -4,30 +4,30 @@ image_yscale = size;
 switch (typeG){
 	case 1: gravityDistance_is_editable = true;
 			gravityForce_is_editable = true;
-		break; //tudo editável
+		break; //tudo editável W
 	case 2: gravityDistance_is_editable = true;
 			gravityForce_is_editable = false;
-		break; //apenas distancia gravitacional
+		break; //apenas distancia gravitacional A
 	case 3: gravityDistance_is_editable = false;
 			gravityForce_is_editable = true;
-		break; //apenas força gravitacional
+		break; //apenas força gravitacional D
 	case 0: gravityDistance_is_editable = false;
 			gravityForce_is_editable = false;
-		break; //nada editável
+		break; //nada editável S
 }
 switch (typeA){
 	case 1: atmosphereDistance_is_editable = true;
 			atmosphereForce_is_editable = true;
-		break; //tudo editável
+		break; //tudo editável T
 	case 2: atmosphereDistance_is_editable = true;
 			atmosphereForce_is_editable = false;
-		break; //apenas distancia atmosférica
+		break; //apenas distancia atmosférica H
 	case 3: atmosphereDistance_is_editable = false;
 			atmosphereForce_is_editable = true;
-		break; //apenas força atmosférica
+		break; //apenas força atmosférica F
 	case 0: atmosphereDistance_is_editable = false;
 			atmosphereForce_is_editable = false;
-		break; //nada editável
+		break; //nada editável G
 }
 
 
@@ -78,12 +78,12 @@ if (((control.edit_mode)) || (control.dev_mode)) && (place_meeting(x, y, control
 	}
 }
 if ((control.dev_mode) && (place_meeting(x, y, control))){
-	if keyboard_check_pressed(ord("0")) typeG = 0;
-	if keyboard_check_pressed(ord("1")) typeG = 1;
-	if keyboard_check_pressed(ord("2")) typeG = 2;
-	if keyboard_check_pressed(ord("3")) typeG = 3;
-	if keyboard_check_pressed(ord("9")) typeA = 0;
-	if keyboard_check_pressed(ord("4")) typeA = 1;
-	if keyboard_check_pressed(ord("5")) typeA = 2;
-	if keyboard_check_pressed(ord("6")) typeA = 3;
+	if keyboard_check_pressed(ord("W")) typeG = 0;
+	if keyboard_check_pressed(ord("A")) typeG = 1;
+	if keyboard_check_pressed(ord("D")) typeG = 2;
+	if keyboard_check_pressed(ord("S")) typeG = 3;
+	if keyboard_check_pressed(ord("T")) typeA = 0;
+	if keyboard_check_pressed(ord("F")) typeA = 1;
+	if keyboard_check_pressed(ord("H")) typeA = 2;
+	if keyboard_check_pressed(ord("F")) typeA = 3;
 }
