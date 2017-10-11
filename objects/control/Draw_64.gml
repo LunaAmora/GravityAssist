@@ -7,7 +7,7 @@ if (dev_mode)
 }
 else if (win){
 	big_text = "LEVEL COMPLETE"
-	small_text = "[space] to next level"
+	small_text = "[space] to next level\nor [<] and [>] to change levels"
 }	
 else if (edit_mode)
 {
@@ -29,7 +29,7 @@ if (win) draw_text(room_width / 2, room_height - 90, "WIN!");
 draw_set_font(default_font);
 	
 draw_text(room_width / 2, 75, small_text);
-if (win) draw_text(room_width / 2, room_height - 55, "<= Change Levels =>");
+//if (win) draw_text(room_width / 2, room_height - 55, "<= Change Levels =>");
 
 draw_set_halign(fa_right);
 seconds = (time div room_speed);
