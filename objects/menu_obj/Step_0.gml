@@ -96,7 +96,7 @@ switch (state)
 			if (string_copy(button.text, 1, 5) == "Level")
 			{
 				level = real(string_copy(button.text, string_length(button.text) - 1, 2)) - 1;
-				global_control.level = level;
+				change_level_scr(level);
 				room_goto(space_room);
 			}
 		}
