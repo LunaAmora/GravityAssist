@@ -1,11 +1,12 @@
 if (!passed){
 	draw_self();
 	if (first){
-		with(objective_ring_obj){
-			if (objective_id == other.objective_id){
-				draw_line(other.x, other.y, x, y);
-			}
-		}
+		draw_line(x, y, pair.x, pair.y);
+	}
+
+}
+else if (first){
+	if (!pair.passed){
+		pair.passed = true;
 	}
 }
-draw_set_color(c_white);

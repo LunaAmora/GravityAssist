@@ -1,7 +1,7 @@
 if (first){
 	if (!created){
 		pair = instance_create_layer(x, y, "Instances", objective_ring_obj);
-		pair.objective_id = id;
+		pair.pair = id;
 		pair.first = false;
 		pair.created = true;
 		created = true;
@@ -20,26 +20,16 @@ if (first){
 			moving = false;
 		}
 	}
-}
-else{
-	with(objective_ring_obj){
-		if (other.objective_id == objective_id){
-			other.x = x + cos(degtorad(angle))*dist;
-			other.y = y - sin(degtorad(angle))*dist;
-			if collision_line(x, y, other.x, other.y, spaceship_obj, false, true){
-				passed = true;
-			}
-		}
+	pair.x = x + cos(degtorad(angle))*dist;
+	pair.y = y - sin(degtorad(angle))*dist;
+	if collision_line(x, y, pair.x, pair.y, spaceship_obj, false, true){
+		passed = true;
 	}
 }
+
 if place_meeting(x, y, control){
 	if (first) angle += (mouse_wheel_up() - mouse_wheel_down())*(1 + keyboard_check(vk_alt)*9);
 	if mouse_check_button(mb_middle){
-		with(objective_ring_obj){
-			if (objective_id == other.objective_id){
-				instance_destroy();
-			}
-		}
 		instance_destroy();
 	}
 }
