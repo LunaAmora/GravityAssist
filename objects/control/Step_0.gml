@@ -59,12 +59,13 @@ if keyboard_check_pressed(vk_space){
 		}
 	}
 }
-
-if keyboard_check_pressed(vk_right) && current_level < (number_of_levels-1){
-	change_level_scr(current_level + 1);
-}
-if keyboard_check_pressed(vk_left) && current_level > 0{
-	change_level_scr(current_level - 1);
+if (dev_mode || win){
+	if keyboard_check_pressed(vk_right) && current_level < (number_of_levels-1){
+		change_level_scr(current_level + 1);
+	}
+	if keyboard_check_pressed(vk_left) && current_level > 0{
+		change_level_scr(current_level - 1);
+	}
 }
 
 if (dev_mode){

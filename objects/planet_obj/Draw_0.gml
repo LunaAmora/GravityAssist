@@ -3,38 +3,45 @@ planet_color = make_color_hsv((control.coll + control.col  + 128) mod 255, 255, 
 draw_set_color(planet_color)
 draw_circle(x, y, sprite_height/2, false)
 //draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, make_color_hsv((control.coll + control.col  + 128) mod 255,(255),control.hsv_light), image_alpha);
+
 draw_set_color(c_white);
 
-if (control.edit_mode) && ((atmosphereForce_is_editable && !mode_editing) || (gravityForce_is_editable && mode_editing)){
-	draw_set_color(c_white);
+if (control.edit_mode){
+	if ((atmosphereForce_is_editable && !mode_editing) || (gravityForce_is_editable && mode_editing)){
+		draw_set_color(c_ltgray);
+	}
+	else{
+		draw_set_color(c_black);
+	}
 	
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+
+	if (!mode_editing){
+		draw_text(x, y, string(atmosphere_force-1000));
+	}
+	else draw_text(x, y, string(density));
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
 }
-else{
-	draw_set_color(c_black);	
-}
-
-draw_set_valign(fa_middle);
-draw_set_halign(fa_center);
-
-if (!mode_editing){
-	draw_text(x, y, string(atmosphere_force-1000));
-}
-else draw_text(x, y, string(density));
-
-
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
 
 draw_set_color(c_white);
 
-if (control.edit_mode) && (atmosphereDistance_is_editable && !mode_editing){
-	draw_set_color(c_white);
+if (control.edit_mode){
+	if ((atmosphereDistance_is_editable && !mode_editing) || (gravityDistance_is_editable && mode_editing)){
+		draw_set_color(c_white);
+	}
+	else{
+		//draw_set_color(make_color_hsv((control.coll + control.col + 128) mod 255, 255, control.hsv_light));
+		draw_set_color(c_red);
+	}
+	if (!mode_editing){
+		if (atmosphere_distance >= sprite_height/2) draw_circle(x, y, atmosphere_distance, true);
+	}
+	else{
+		if (gravity_distance >= sprite_height/2) draw_circle(x, y, gravity_distance, true);
+	}
 }
-else{
-	draw_set_color(make_color_hsv((control.coll + control.col) mod 255, 255, control.hsv_light));	
-}
-
-if (atmosphere_distance >= sprite_height/2) draw_circle(x, y, atmosphere_distance, true);
 
 draw_set_color(c_white);
 
