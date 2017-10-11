@@ -5,7 +5,7 @@ light.outer_radius = gravity_distance;
 light.layers = 3;
 light.colour = planet_color;
 light.inner_clarity = 7;
-light.outer_clarity = 7;
+light.outer_clarity = 12;
 light.variation = gravity_distance/25
 light.var_counter = value;
 
