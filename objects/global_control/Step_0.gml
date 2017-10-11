@@ -1,5 +1,10 @@
 if keyboard_check_pressed(vk_escape){
-	game_end();
+	if (room == space_room){
+		room_goto(MENU);
+	}
+	else{
+		game_end();	
+	}
 }
 if keyboard_check_pressed(vk_backspace){
 	room_restart();
