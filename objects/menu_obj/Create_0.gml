@@ -1,15 +1,14 @@
 state = "main";
 title = "GRAVITY ASSIST";
 
-start_button = instance_create_layer(100, 100, "Instances", menu_button_obj)
-exit_button = instance_create_layer(100, 200, "Instances", menu_button_obj)
+//main buttons
+start_button = noone;
+exit_button = noone
 
-with start_button
-{
-	text = "Play!";
-}
-
-with exit_button
-{
-	text = "Skedoodle";
-}
+//level select buttons
+lvl_1_button = noone;
+lvl_2_button = noone;
+lvl_3_button = noone;
+lvl_4_button = noone;
+lvl_5_button = noone;
+lvl_6_button = noone;
