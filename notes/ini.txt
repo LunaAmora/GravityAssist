@@ -165,7 +165,7 @@ ship_angle="0.604961"
 ship_impulse="100.000000"
 [Config]
 number_of_levels="10.0"
-current_level="0.000000"
+current_level="1.000000"
 [0_0]
 typeG="2"
 x_pos="668.00000"
