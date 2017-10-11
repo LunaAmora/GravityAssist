@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "6f835d06-763a-42db-8594-0f921eb58dfa",
+            "Value": {
+                "id": "45baefc4-7761-4079-a003-c5acb6ffce7c",
+                "resourcePath": "objects\\global_control\\global_control.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "747bb6d9-fb6d-4a1b-9d38-e658312880be",
             "Value": {
                 "id": "17448ce0-5244-4b14-9843-e19b348179e3",
