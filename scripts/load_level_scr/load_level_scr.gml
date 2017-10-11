@@ -45,5 +45,5 @@ if (objective_x*objective_y != 0) instance_create_layer(objective_x, objective_y
 ini_close();
 
 for(v = 0; v < irandom_range(15,30); v++){
-	instance_create_layer(irandom(room_width), irandom(room_height), "SFX1", star_obj);
+	instance_create_layer(irandom(room_width), irandom(room_height), "Stars", star_obj);
 }

@@ -33,7 +33,17 @@ switch (state)
 		break;
 		
 	case "level_select":
-		//title = "LEVEL SELECT";
+		title = "LEVEL SELECT";
+		
+		if (back_button == noone)
+		{
+			back_button = instance_create_layer(100, 350, "Instances", menu_button_obj);
+			with back_button
+			{
+				text = "Back";
+			}
+		}
+		
 		
 		if (lvl_1_button == noone)
 		{
@@ -98,6 +108,18 @@ switch (state)
 				level = real(string_copy(button.text, string_length(button.text) - 1, 2)) - 1;
 				change_level_scr(level);
 				room_goto(space_room);
+			}
+			else
+			{
+				state = "main";
+				with (menu_button_obj) instance_destroy();
+				back_button = noone;
+				lvl_1_button = noone;
+				lvl_2_button = noone;
+				lvl_3_button = noone;
+				lvl_4_button = noone;
+				lvl_5_button = noone;
+				lvl_6_button = noone;
 			}
 		}
 		
