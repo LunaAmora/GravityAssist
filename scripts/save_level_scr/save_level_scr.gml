@@ -9,21 +9,32 @@ ini_write_real(string(level), "ship_y", spaceship_obj.y)
 ini_write_real(string(level), "ship_angle", spaceship_obj.phy_rotation);
 ini_write_real(string(level), "ship_impulse", spaceship_obj.ship_impulse);
 
-for (a = 0; a < instance_number(planet_obj); a++){
-	for (i = 0; i < array_length_1d(Planets_id); i++){
-		if (Planets_id[i] == instance_find(planet_obj, a)){
-			ini_write_real(string(level)+"_"+string(a), "x_pos", Planets_id[i].x);
-			ini_write_real(string(level)+"_"+string(a), "y_pos", Planets_id[i].y);
-			ini_write_real(string(level)+"_"+string(a), "density", Planets_id[i].density);
-			ini_write_real(string(level)+"_"+string(a), "size", Planets_id[i].size);
-			ini_write_real(string(level)+"_"+string(a), "gravity_distance", Planets_id[i].gravity_distance);
-			ini_write_real(string(level)+"_"+string(a), "atmosphere_distance", Planets_id[i].atmosphere_distance);
-			ini_write_real(string(level)+"_"+string(a), "atmosphere_velocity", Planets_id[i].atmosphere_force);
-			ini_write_real(string(level)+"_"+string(a), "typeG", Planets_id[i].typeG)
-			ini_write_real(string(level)+"_"+string(a), "typeA", Planets_id[i].typeA)
-		}
-	}
+
+obj_count = 0;
+ini_write_real(string(level), "number_of_planets", instance_number(planet_obj));
+
+list_planets = ds_list_create();
+with(planet_obj){
+	ds_list_add(other.list_planets, id);
 }
+
+while (!ds_list_empty(list_planets)){
+	Planets_id = ds_list_find_value(list_planets, 0);
+	ds_list_delete(list_planets, 0);
+	
+	ini_write_real(string(level)+"_"+string(obj_count), "x_pos", Planets_id.x);
+	ini_write_real(string(level)+"_"+string(obj_count), "y_pos", Planets_id.y);
+	ini_write_real(string(level)+"_"+string(obj_count), "density", Planets_id.density);
+	ini_write_real(string(level)+"_"+string(obj_count), "size", Planets_id.size);
+	ini_write_real(string(level)+"_"+string(obj_count), "gravity_distance", Planets_id.gravity_distance);
+	ini_write_real(string(level)+"_"+string(obj_count), "atmosphere_distance", Planets_id.atmosphere_distance);
+	ini_write_real(string(level)+"_"+string(obj_count), "atmosphere_velocity", Planets_id.atmosphere_force);
+	ini_write_real(string(level)+"_"+string(obj_count), "typeG", Planets_id.typeG)
+	ini_write_real(string(level)+"_"+string(obj_count), "typeA", Planets_id.typeA)
+	obj_count++
+}
+
+ds_list_destroy(list_planets);
 
 obj_count = 0;
 ini_write_real(string(level), "number_of_objectives", instance_number(objective_ring_obj)/2);
@@ -41,5 +52,7 @@ while (!ds_priority_empty(list_objectives)){
 	ini_write_real(string(level)+"*"+string(obj_count), "dist", objective.dist);
 	obj_count++
 }
+
+ds_priority_destroy(list_objectives);
 
 ini_close();

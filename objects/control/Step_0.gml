@@ -1,7 +1,3 @@
-if (level_load[current_level] != true){ 
-	load_level_scr(current_level);
-	level_load[current_level] = true;
-}
 if (dev_mode){
 	if keyboard_check_pressed(vk_enter){
 		save_level_scr(current_level);
@@ -51,7 +47,7 @@ if keyboard_check_pressed(vk_space){
 	else{
 		if (win) win  = (!win);
 		if (!edit_mode){
-			reset_scr(0,0);
+			reset_scr(ship_x, ship_y, ship.ship_impulse, ship.phy_rotation);
 		}
 		else{
 			play_scr();
@@ -60,8 +56,16 @@ if keyboard_check_pressed(vk_space){
 	}
 }
 //if (dev_mode || win){
-	if keyboard_check_pressed(vk_right) && current_level < (number_of_levels-1){
-		change_level_scr(current_level + 1);
+	if keyboard_check_pressed(vk_right){
+		if (current_level < (number_of_levels-1)){
+			change_level_scr(current_level + 1);
+		}
+		else if (dev_mode){
+			ini_open("levels.ini");
+			ini_write_real("Config", "number_of_levels", number_of_levels + 1);
+			ini_close();
+			change_level_scr(current_level + 1);
+		}
 	}
 	if keyboard_check_pressed(vk_left) && current_level > 0{
 		change_level_scr(current_level - 1);

@@ -1,6 +1,6 @@
 value = irandom(360);
 editing = false;
-ship_impulse = 0;
+ship_impulse = 1000;
 angle = 0;
 light = id;
 

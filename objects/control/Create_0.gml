@@ -12,15 +12,15 @@ hsv_light = 255;
 
 window_set_fullscreen(true);
 
-for (i= 0; i < 10; i++){
-	Planets_id[i] = 0;
-	level_load[i] = false;
-}
-
 ini_open("levels.ini");
 number_of_levels = ini_read_real("Config", "number_of_levels", 1);
 current_level = ini_read_real("Config", "current_level", 0);
 
+number_of_planets = ini_read_real(string(current_level), "number_of_planets", 0);
+number_of_objectives = ini_read_real(string(current_level), "number_of_objectives", 0);
+
+load_level_scr(current_level);
+/*
 for (i = 0; i < number_of_levels; i++){
 	number_of_planets[i] = ini_read_real(string(i), "number_of_planets", 0);
 	number_of_objectives[i] = ini_read_real(string(i), "number_of_objectives", 0);

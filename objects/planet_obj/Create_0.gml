@@ -16,8 +16,6 @@ atmosphere_force = 1000;
 
 mode_editing = true;
 
-control.Planets_id[instance_number(planet_obj)-1] = id;
-
 editing = false;
 
 gravityForce_is_editable = false;

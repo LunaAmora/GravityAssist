@@ -29,9 +29,7 @@ if (control.win){
 
 if (control.dev_mode){
 	if keyboard_check_pressed(ord("P")){
-		control.ship_x = mouse_x;
-		control.ship_y = mouse_y;
-		reset_scr(mouse_x, mouse_y);
+		reset_scr(mouse_x, mouse_y, control.ship.ship_impulse, control.ship.phy_rotation);
 	}
 
 	if place_meeting(x, y, control){
