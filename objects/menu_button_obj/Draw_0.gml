@@ -3,6 +3,10 @@ else image_index = 0;
 
 draw_self();
 
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
 draw_set_color(c_black);
-draw_text(x, y, text);
+draw_text(x+sprite_width/2, y+sprite_height/2, (string_length(text) > 7) ? "Level\n" + string_copy(text, string_length(text) - 1, 2): string(text));
 draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
