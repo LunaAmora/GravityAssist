@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "35ddd322-4026-430a-85aa-6ed8aa3ad6dc",
+            "Value": {
+                "id": "cd154ccc-fa45-4b9e-b3a5-eac31271d758",
+                "resourcePath": "datafiles_yy\\1.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "3cb707ef-184f-45b1-a1eb-5e901cf064aa",
             "Value": {
                 "id": "44a13ff0-dc56-4e30-8e54-3d13447b5c48",
@@ -151,6 +159,14 @@
             }
         },
         {
+            "Key": "6141e191-3940-4589-be1e-d73ee00e8edc",
+            "Value": {
+                "id": "748385d5-abb3-44a8-8936-170a75e480de",
+                "resourcePath": "datafiles_yy\\config.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "61f7f22e-c059-4f17-aad3-0588b191591b",
             "Value": {
                 "id": "3720b173-c379-4dff-8a86-a7c64a1ee524",
@@ -164,6 +180,14 @@
                 "id": "df1edff7-8a26-4d1b-97fb-4da1a66ef118",
                 "resourcePath": "scripts\\play_scr\\play_scr.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "65a1f5e5-461e-465c-92dd-172bc42417e3",
+            "Value": {
+                "id": "3a3a7922-8f88-4515-9565-d8d7fa9537b6",
+                "resourcePath": "datafiles_yy\\5.ini.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -231,6 +255,14 @@
             }
         },
         {
+            "Key": "816f15ad-3edd-4f06-8bf2-80992abd6902",
+            "Value": {
+                "id": "ca00cb07-b64a-4204-8b70-f7230146552b",
+                "resourcePath": "datafiles_yy\\6.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "82bc3897-8aaa-4472-b78a-e7600db9925e",
             "Value": {
                 "id": "688c432a-6f83-407f-af26-8080e28428bd",
@@ -260,6 +292,22 @@
                 "id": "323abacf-cb6a-4f9d-8214-ddaa163937ba",
                 "resourcePath": "views\\8e84bdd1-8398-44e7-a343-ad14afe5df5c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9126ae6f-8f10-4988-9943-f34fdee51206",
+            "Value": {
+                "id": "089610a7-548f-4a7b-9cec-5c93fa13df18",
+                "resourcePath": "datafiles_yy\\4.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "9d403079-78fc-4536-9fc5-e432934a0f19",
+            "Value": {
+                "id": "06955ae6-8bef-475e-a4c9-42dc2721ad81",
+                "resourcePath": "datafiles_yy\\2.ini.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -303,11 +351,11 @@
             }
         },
         {
-            "Key": "ac3adebc-2ad6-4996-ac49-512a13d0545d",
+            "Key": "b2a458f3-5acc-4518-9022-a9421a7c37d4",
             "Value": {
-                "id": "3c78a95c-105e-4e96-96e0-1dc68fe0d9d3",
-                "resourcePath": "notes\\ini.yy",
-                "resourceType": "GMNotes"
+                "id": "4eca6e42-bded-47cd-a7c6-2b9a5bbc6436",
+                "resourcePath": "datafiles_yy\\0.ini.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -404,6 +452,14 @@
                 "id": "9504dae9-f3c9-49b0-af38-622d425f9ef0",
                 "resourcePath": "sprites\\trail\\trail.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "eb015e0e-3bf1-4495-852c-a328fb83ec26",
+            "Value": {
+                "id": "97e9a69c-c70f-4208-ab2b-83b4e84071d8",
+                "resourcePath": "datafiles_yy\\3.ini.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

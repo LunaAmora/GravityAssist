@@ -61,8 +61,8 @@ if keyboard_check_pressed(vk_space){
 			change_level_scr(current_level + 1);
 		}
 		else if (dev_mode){
-			ini_open("levels.ini");
-			ini_write_real("Config", "number_of_levels", number_of_levels + 1);
+			ini_open(working_directory + "config.ini");
+			ini_write_real("config", "number_of_levels", number_of_levels + 1);
 			ini_close();
 			change_level_scr(current_level + 1);
 		}

@@ -12,7 +12,7 @@ control.ship_y = b;
 control.ship_impulse = c;
 control.ship_angle = d;
 
-ini_open("levels.ini")
+ini_open(working_directory + string(control.current_level));
 with(control){
 	ship = instance_create_layer(ship_x, ship_y, "Ship", spaceship_obj);
 	ship.phy_rotation = ship_angle;
