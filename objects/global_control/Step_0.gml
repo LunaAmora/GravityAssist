@@ -12,3 +12,21 @@ if keyboard_check_pressed(vk_backspace){
 if keyboard_check_pressed(vk_f12){
 	window_set_fullscreen(!window_get_fullscreen());
 }
+if (room == MENU){
+	if (keyboard_check_pressed(vk_f1)){
+		if (show_question("You want to delete all local files? This process is irreversible.")){
+			ini_open(working_directory + "config.ini");
+			a = ini_read_real("config", "number_of_levels", 0);
+			ini_close();
+	
+			for(i = 0; i < a; i++){
+				if file_exists(string(i)+".ini"){
+					file_delete(string(i)+".ini");
+				}
+			}
+			if file_exists("config.ini"){
+				file_delete("config.ini");
+			}
+		}
+	}
+}

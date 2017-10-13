@@ -1,0 +1,11 @@
+A) Se quiser integrar mudanças locais ao projeto:
+
+	1: Clique com o botão direito na aba de "IncludedFeles" no painel de "Resources".
+	2: Clique em "Insert Included File".
+	3: Naveque para "C:\Users\NomeDoSeuComputador\AppData\Local\GravityAssist".
+	4: Selecione todos os arquivos modificados e clique em "abrir".
+
+B) Se quiser receber a verção mais atual dos arquivos, ou desfazer mudanças locais:
+
+	1: Aperte a tecla "F1" no menu do jogo.
+	2: Clique no botão de "yes" da caixa de texto.
