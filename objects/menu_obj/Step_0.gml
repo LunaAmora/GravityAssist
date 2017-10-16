@@ -47,7 +47,7 @@ switch (state)
 		for (i = 0; i < array_length_1d(lvl_button); i++){
 			if (lvl_button[i] == noone)
 			{
-				lvl_button[i] = instance_create_layer(lateral_border + x_pos*(i mod button_per_line), superior_border + y_pos*(i div button_per_line), "Instances", menu_button_obj);
+				lvl_button[i] = instance_create_layer(lateral_border + x_pos*((i mod button_per_page) mod button_per_line) + (i div button_per_page)*room_width, superior_border + y_pos*((i mod button_per_page) div button_per_line), "Instances", menu_button_obj);
 				with lvl_button[i]
 				{
 					text = "Level " + string(other.i+1);

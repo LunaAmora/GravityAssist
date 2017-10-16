@@ -1,6 +1,7 @@
 draw_set_circle_precision(32);
 randomize();
 
+stars = 0;
 col = irandom(255);
 coll = 0;
 win = false;

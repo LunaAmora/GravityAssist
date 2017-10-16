@@ -19,8 +19,9 @@ back_button = noone;
 //level select variables
 lateral_border = 100;
 superior_border = 100;
-button_per_line = 5;
-line_per_screen = 6;
+button_per_line = 6;
+line_per_screen = 5;
+button_per_page = (button_per_line*(line_per_screen-1));
 
 x_pos = (sprite_get_width(menu_button_spr) + ((room_width - (2*lateral_border) - (button_per_line*sprite_get_width(menu_button_spr)))/(button_per_line-1)));
 y_pos = (sprite_get_height(menu_button_spr) + ((room_height - (2*superior_border) - (line_per_screen*sprite_get_height(menu_button_spr)))/(line_per_screen-1)));
