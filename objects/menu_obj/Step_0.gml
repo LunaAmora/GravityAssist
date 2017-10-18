@@ -1,5 +1,4 @@
-switch (state)
-{
+switch (state){
 	case "main":
 		title = "GRAVITY ASSIST";
 		
@@ -29,8 +28,7 @@ switch (state)
 			exit_button = noone;
 		}
 		if (mouse_check_button_pressed(mb_left)) && (position_meeting(mouse_x, mouse_y, exit_button)) game_end();
-		
-		break;
+	break;
 		
 	case "level_select":
 		title = "LEVEL SELECT";
@@ -47,26 +45,28 @@ switch (state)
 		for (i = 0; i < array_length_1d(lvl_button); i++){
 			if (lvl_button[i] == noone)
 			{
+				ini_open(working_directory + "config.ini");
+				progress = ini_read_real("progress", "progress", 0);
+				ini_close();
 				lvl_button[i] = instance_create_layer(lateral_border + x_pos*((i mod button_per_page) mod button_per_line) + (i div button_per_page)*room_width, superior_border + y_pos*((i mod button_per_page) div button_per_line), "Instances", menu_button_obj);
 				with lvl_button[i]
 				{
+					active = other.i <= other.progress ? true : false;
 					text = "Level " + string(other.i+1);
 				}
 			}
 		}
 		
-		if (mouse_check_button_pressed(mb_left)) && (position_meeting(mouse_x, mouse_y, menu_button_obj))
-		{
-			
+		if (mouse_check_button_pressed(mb_left)) && (position_meeting(mouse_x, mouse_y, menu_button_obj)){
 			var button = instance_position(mouse_x, mouse_y, menu_button_obj);
-			if (string_copy(button.text, 1, 5) == "Level")
-			{
-				level = real(string_copy(button.text, string_length(button.text) - 1, 2)) - 1;
-				change_level_scr(level);
-				room_goto(space_room);
+			if (string_copy(button.text, 1, 5) == "Level"){
+				if (button.active){
+					level = real(string_copy(button.text, string_length(button.text) - 1, 2)) - 1;
+					change_level_scr(level);
+					room_goto(space_room);
+				}
 			}
-			else
-			{
+			else{
 				state = "main";
 				with (menu_button_obj) instance_destroy();
 				back_button = noone;
@@ -75,7 +75,6 @@ switch (state)
 					lvl_button[i] = noone;
 				}
 			}
-		}
-		
-		break;
+		}	
+	break;
 }

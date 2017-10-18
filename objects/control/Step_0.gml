@@ -12,6 +12,7 @@ if keyboard_check_pressed(vk_tab){
 	if (dev_mode) dev_mode = false;
 	else dev_mode = true;
 }
+
 if (creating == true) && (mouse_check_button_released(mb_middle)){
 	m_distance = point_distance(x, y, mouse_x, mouse_y);
 	if (m_distance > 1){
@@ -56,7 +57,7 @@ if keyboard_check_pressed(vk_space){
 		}
 	}
 }
-//if (dev_mode || win){
+if (dev_mode || win){
 	if keyboard_check_pressed(vk_right){
 		if (current_level < (number_of_levels-1)){
 			change_level_scr(current_level + 1);
@@ -71,7 +72,7 @@ if keyboard_check_pressed(vk_space){
 	if keyboard_check_pressed(vk_left) && current_level > 0{
 		change_level_scr(current_level - 1);
 	}
-//}
+}
 
 if (dev_mode){
 	if keyboard_check_pressed(ord("I")){
