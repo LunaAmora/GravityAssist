@@ -21,6 +21,7 @@ if (control.win){
 	image_alpha -= decay / 2;
 	image_xscale -= decay / 2;
 	image_yscale = image_xscale;
+	light.new = 0;
 	if (image_xscale < 0.1){
 		instance_destroy();
 		instance_destroy(light);

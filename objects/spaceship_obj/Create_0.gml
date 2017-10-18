@@ -18,3 +18,8 @@ if light == id{
 	light = instance_create_layer(x, y,"Light", light_obj);
 	light.owner = "player";
 }
+
+light.layers = 3;
+light.colour = c_white;
+light.inner_clarity = 20;
+light.outer_clarity = 5;

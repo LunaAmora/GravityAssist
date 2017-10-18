@@ -10,3 +10,4 @@ mode = true;
 owner = "other";
 variation = 0;
 var_counter = 0;
+new = 0;

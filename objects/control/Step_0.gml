@@ -47,7 +47,8 @@ if keyboard_check_pressed(vk_space){
 	else{
 		if (win) win  = (!win);
 		if (!edit_mode){
-			reset_scr(ship_x, ship_y, ship.ship_impulse, ship.phy_rotation);
+			reset_scr(ship_x, ship_y, instance_exists(spaceship_obj) ? ship.ship_impulse: ship_impulse, instance_exists(spaceship_obj) ? ship.phy_rotation: ship_angle);
+			ship.light.new = 0;
 		}
 		else{
 			play_scr();

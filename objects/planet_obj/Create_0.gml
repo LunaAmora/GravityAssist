@@ -24,3 +24,6 @@ atmosphereForce_is_editable = false;
 atmosphereDistance_is_editable = false;
 
 light = instance_create_layer(x, y,"Light", light_obj);
+light.layers = 3;
+light.inner_clarity = 40;
+light.outer_clarity = 15;
