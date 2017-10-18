@@ -3,6 +3,8 @@ editing = false;
 ship_impulse = 1000;
 angle = 0;
 light = id;
+perma_trail = false;
+alarm[0] = room_speed / 4;
 
 //ilusion_ x = 0;
 //ilusion_ y = 0;

@@ -20,7 +20,7 @@ with(control){
 	ini_close();
 }
 
-with(trail_obj) instance_destroy();
+with(trail_obj) if (!permanent) instance_destroy();
 
 control.edit_mode = true;
 

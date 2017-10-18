@@ -3,3 +3,4 @@ with (spaceship_obj){
 }
 control.time = 0;
 control.edit_mode = false;
+with (trail_obj) instance_destroy();
