@@ -99,3 +99,7 @@ if ((global_control.dev_mode) && (place_meeting(x, y, control))){
 		if keyboard_check_pressed(ord("4")) typeA = 3;
 	}
 }
+
+if (atmosphere_distance > ((gravity_distance - sprite_width/2)/3) + sprite_width/2){
+	atmosphere_distance = (((gravity_distance - sprite_width/2)/3) + sprite_width/2);	
+}
