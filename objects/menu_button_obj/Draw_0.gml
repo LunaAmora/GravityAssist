@@ -2,7 +2,8 @@ if (position_meeting(mouse_x, mouse_y, id)) image_index = 1;
 else image_index = 0;
 if (!active) image_index = 2;
 
-draw_self();
+//draw_self();
+draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, menu_obj.colour, image_alpha);
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);

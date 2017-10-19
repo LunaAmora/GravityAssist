@@ -4,19 +4,51 @@ switch (state){
 		
 		if (start_button == noone)
 		{
-			start_button = instance_create_layer(100, 100, "Instances", menu_button_obj);
+			start_button = instance_create_layer(100, room_height - 500, "Instances", menu_button_obj);
 			with start_button
 			{
 				text = "Play!";
+				sprite_index = main_menu_button_spr;
+			}
+		}
+		
+		if (custom_button == noone)
+		{
+			custom_button = instance_create_layer(100, room_height - 400, "Instances", menu_button_obj);
+			with custom_button
+			{
+				text = "Custom Levels ;)\nNot ready yet";
+				sprite_index = main_menu_button_spr;
+			}
+		}
+		
+		if (extras_button == noone)
+		{
+			extras_button = instance_create_layer(100, room_height - 300, "Instances", menu_button_obj);
+			with extras_button
+			{
+				text = "Extras *O*\nNot ready yet";
+				sprite_index = main_menu_button_spr;
+			}
+		}
+		
+		if (options_button == noone)
+		{
+			options_button = instance_create_layer(100, room_height - 200, "Instances", menu_button_obj);
+			with options_button
+			{
+				text = "Options\nNot ready yet";
+				sprite_index = main_menu_button_spr;
 			}
 		}
 		
 		if (exit_button == noone)
 		{
-			exit_button = instance_create_layer(100, 200, "Instances", menu_button_obj);
+			exit_button = instance_create_layer(100, room_height - 100, "Instances", menu_button_obj);
 			with exit_button
 			{
 				text = "Exit...";
+				sprite_index = main_menu_button_spr;
 			}
 		}
 		
@@ -26,6 +58,9 @@ switch (state){
 			with (menu_button_obj) instance_destroy();
 			start_button = noone;
 			exit_button = noone;
+			options_button = noone;
+			custom_button = noone;
+			extras_button = noone;
 		}
 		if (mouse_check_button_pressed(mb_left)) && (position_meeting(mouse_x, mouse_y, exit_button)) game_end();
 	break;

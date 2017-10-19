@@ -24,7 +24,7 @@ draw_set_halign(fa_center);
 draw_set_font(big_font);
 
 draw_text(room_width / 2, 30, big_text);
-if (win) draw_text(room_width / 2, room_height - 90, "WIN!");
+if (win) draw_text(room_width / 2, room_height / 2, "WIN!");
 
 draw_set_font(default_font);
 	
