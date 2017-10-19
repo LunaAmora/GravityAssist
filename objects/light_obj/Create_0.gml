@@ -1,5 +1,3 @@
-light_x = 0;
-light_y = 0;
 inner_radius = 0;
 outer_radius = 0;
 layers = 1;
