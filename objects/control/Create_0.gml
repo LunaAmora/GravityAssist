@@ -1,5 +1,4 @@
 draw_set_circle_precision(64);
-randomize();
 
 stars = 0;
 col = irandom(255);
@@ -8,7 +7,9 @@ win = false;
 creating = false;
 edit_mode = true;
 time = 0;
+seconds = 0;
 hsv_light = 255;
+out_timer = 0;
 
 ini_open(working_directory + "config.ini");
 number_of_levels = ini_read_real("config", "number_of_levels", 1);

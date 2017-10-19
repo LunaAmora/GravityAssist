@@ -26,9 +26,16 @@ draw_set_font(big_font);
 draw_text(room_width / 2, 30, big_text);
 if (win) draw_text(room_width / 2, room_height / 2, "WIN!");
 
+if (out_timer div room_speed >= 1){
+	draw_set_font(big_big_font);
+	draw_set_valign(fa_middle);
+	draw_text(room_width/2, room_height/2, string(4 - (out_timer div room_speed)));
+	draw_set_valign(fa_top);
+}
+
 draw_set_font(default_font);
 	
-draw_text(room_width / 2, 75, small_text);
+draw_text(room_width/2, 75, small_text);
 //if (win) draw_text(room_width / 2, room_height - 55, "<= Change Levels =>");
 
 draw_set_halign(fa_right);
