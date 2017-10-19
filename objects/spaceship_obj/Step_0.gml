@@ -37,7 +37,7 @@ if (control.win){
 	}
 }
 
-if (control.dev_mode){
+if (global_control.dev_mode){
 	if keyboard_check_pressed(ord("P")){
 		reset_scr(mouse_x, mouse_y, control.ship.ship_impulse, control.ship.phy_rotation);
 	}

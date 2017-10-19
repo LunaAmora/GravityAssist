@@ -2,7 +2,7 @@
 {
     "name": "space_room",
     "id": "6115ee8f-ac56-4926-a377-53b1df7f6ca3",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
@@ -181,7 +181,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-                {"name": "inst_4F1DFAF6","id": "bc9d11a5-86ba-46d1-af12-1036b52d8ca9","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4F1DFAF6","objId": "aa8c5827-6482-4746-bf04-83eb13c8c7ee","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 39,"y": 0}
+                {"name": "inst_4F1DFAF6","id": "bc9d11a5-86ba-46d1-af12-1036b52d8ca9","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_4F1DFAF6.gml","creationCodeType": ".gml","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4F1DFAF6","objId": "aa8c5827-6482-4746-bf04-83eb13c8c7ee","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 39,"y": 0}
             ],
             "layers": [
 

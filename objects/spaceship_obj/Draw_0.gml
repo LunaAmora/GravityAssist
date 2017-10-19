@@ -26,5 +26,5 @@ gpu_set_blendmode(bm_subtract);
 
 gpu_set_blendmode(bm_normal);
 
-//if (control.dev_mode) draw_text(15, 30, "Impulse: " + string(ship_impulse));
+//if (global_control.dev_mode) draw_text(15, 30, "Impulse: " + string(ship_impulse));
 */
