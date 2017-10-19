@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "db0f14e7-10ec-431e-9686-f42a659d114b",
+            "Value": {
+                "id": "f3e8d532-ee76-48a3-bb5b-d4387d0af39d",
+                "resourcePath": "fonts\\big_big_font\\big_big_font.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "db45167b-23d9-431e-8c6c-a123f618e158",
             "Value": {
                 "id": "374e8a7a-dce6-4ffc-be04-69b04f7392f2",
