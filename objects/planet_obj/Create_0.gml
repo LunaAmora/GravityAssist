@@ -11,7 +11,7 @@ size = 1;
 
 gravity_distance = 200;
 
-atmosphere_distance = 0;
+atmosphere_distance = 200;
 atmosphere_force = 1000;
 
 mode_editing = true;
