@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "58c82ae7-4b36-4a09-8e2d-58ec3ff2aab6",
+            "Value": {
+                "id": "206083cc-ea01-4a1f-ab54-5ba519b6c29e",
+                "resourcePath": "sprites\\atmosphere_spr\\atmosphere_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "593adf2b-2024-4cb0-8db8-b1a1714dbba9",
             "Value": {
                 "id": "a7627468-637e-4a05-a4a0-dbd9fcfa8a53",

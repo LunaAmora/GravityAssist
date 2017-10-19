@@ -1,4 +1,4 @@
-
+draw_sprite_ext(atmosphere_spr, 0, x, y, atmosphere_distance/16, atmosphere_distance/16, value/2, c_white, 0.3);
 
 planet_color = make_color_hsv((control.coll + control.col  + 128) mod 255, 255, control.hsv_light);
 
