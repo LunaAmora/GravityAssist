@@ -9,22 +9,3 @@ B) Se quiser receber a verção mais atual dos arquivos, ou desfazer mudanças l
 
 	1: Aperte a tecla "F1" no menu do jogo.
 	2: Clique no botão de "yes" da caixa de texto.
-	
-
-#region Map Mask
-if ( !surface_exists(mask_surface) ){
-mask_surface = surface_create(1280,720);
-surface_set_target(mask_surface);
-draw_rectangle_spr(0,0,1280,720,c_black,0);
-draw_sprite_ext(spr_map_main,0,640,360,1,1,0,c_black,1);
-surface_reset_target();
-}
-#endregion
-
-gpu_set_blendmode_ext(bm_dest_alpha,bm_src_alpha);
-draw_surface(mask_surface,0,0);
-gpu_set_blendmode(bm_normal);
-
-gpu_set_blendmode_ext(bm_inv_dest_alpha,bm_src_alpha);
-draw_sprite_tiled(spr_texture_wood,0,0,0);
-gpu_set_blendmode(bm_normal);
