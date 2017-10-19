@@ -1,4 +1,7 @@
 radius = 0;
-colour = c_white;
+colour = make_color_hsv((control.coll + control.col + 128 + (choose(90, -90))) mod 255, 200, control.hsv_light);
 clouds = 0;
 reach = 0
+spr1_pos = 0;
+spr2_pos = radius * 2;
+image_alpha = 0.8;
