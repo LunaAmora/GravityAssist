@@ -24,7 +24,11 @@ draw_set_halign(fa_center);
 draw_set_font(big_font);
 
 draw_text(room_width / 2, 30, big_text);
-if (win) draw_text(room_width / 2, room_height - 90, "WIN!");
+
+draw_set_font(big_big_font);
+draw_set_valign(fa_bottom);
+if (win) draw_text(room_width / 2, room_height - 30, "WIN!");
+draw_set_valign(fa_top);
 
 if (out_timer div room_speed >= 1){
 	draw_set_font(big_big_font);
