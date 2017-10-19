@@ -24,6 +24,15 @@ atmosphereForce_is_editable = false;
 atmosphereDistance_is_editable = false;
 
 light = instance_create_layer(x, y,"Light", light_obj);
+atm = instance_create_layer(x, y,"Atmosphere", atm_obj);
+
+with (atm)
+{
+	x = other.x;
+	y = other.y;
+	radius = other.sprite_width;
+}
+
 light.layers = 3;
 light.inner_clarity = 40;
 light.outer_clarity = 15;

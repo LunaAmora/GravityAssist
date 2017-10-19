@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "62c5383b-f546-46b4-89f8-165c253b40a5",
+            "Value": {
+                "id": "32f485e6-29a0-48ff-8bd1-56572370ed30",
+                "resourcePath": "objects\\atm_obj\\atm_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "65290cd8-4d4b-4670-804a-e267780b660d",
             "Value": {
                 "id": "df1edff7-8a26-4d1b-97fb-4da1a66ef118",
