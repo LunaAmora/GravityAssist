@@ -1,4 +1,4 @@
-if (control.dev_mode){
+if (global_control.dev_mode){
 	if (first) moving = true;
 	else{
 		with(objective_ring_obj){

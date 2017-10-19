@@ -1,4 +1,4 @@
-if (dev_mode){
+if (global_control.dev_mode){
 	if keyboard_check_pressed(vk_enter){
 		save_level_scr(current_level);
 	}
@@ -9,9 +9,10 @@ if (dev_mode){
 }
 
 if keyboard_check_pressed(vk_tab){
-	if (dev_mode) dev_mode = false;
-	else dev_mode = true;
+	if (global_control.dev_mode) global_control.dev_mode = false;
+	else global_control.dev_mode = true;
 }
+
 if (creating == true) && (mouse_check_button_released(mb_middle)){
 	m_distance = point_distance(x, y, mouse_x, mouse_y);
 	if (m_distance > 1){
@@ -39,7 +40,7 @@ if !mouse_check_button(mb_middle){
 
 
 if keyboard_check_pressed(vk_space){
-	if ((win) && (!dev_mode)){
+	if ((win) && (!global_control.dev_mode)){
 		if current_level < (number_of_levels-1){
 			change_level_scr(current_level + 1);
 		}
@@ -56,12 +57,12 @@ if keyboard_check_pressed(vk_space){
 		}
 	}
 }
-//if (dev_mode || win){
+if (global_control.dev_mode || win){
 	if keyboard_check_pressed(vk_right){
 		if (current_level < (number_of_levels-1)){
 			change_level_scr(current_level + 1);
 		}
-		else if (dev_mode){
+		else if (global_control.dev_mode){
 			ini_open(working_directory + "config.ini");
 			ini_write_real("config", "number_of_levels", number_of_levels + 1);
 			ini_close();
@@ -71,9 +72,9 @@ if keyboard_check_pressed(vk_space){
 	if keyboard_check_pressed(vk_left) && current_level > 0{
 		change_level_scr(current_level - 1);
 	}
-//}
+}
 
-if (dev_mode){
+if (global_control.dev_mode){
 	if keyboard_check_pressed(ord("I")){
 		instance_create_layer(x, y, "Instances", objective_ring_obj);
 	}

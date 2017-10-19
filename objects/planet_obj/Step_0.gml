@@ -63,7 +63,7 @@ if (instance_exists(target)) && (!control.win){
 
 if (editing = true) && mouse_check_button_released(mb_left){
 	if (!mode_editing){
-		if (point_distance(x, y, mouse_x, mouse_y) <= gravity_distance) || (control.dev_mode) || (gravity_distance < sprite_height/2){
+		if (point_distance(x, y, mouse_x, mouse_y) <= gravity_distance) || (global_control.dev_mode) || (gravity_distance < sprite_height/2){
 			atmosphere_distance = point_distance(x, y, mouse_x, mouse_y);
 		}
 		else atmosphere_distance = gravity_distance;
@@ -76,14 +76,14 @@ if (editing = true) && mouse_check_button_released(mb_left){
 }
 
 if ((control.edit_mode) && (place_meeting(x, y, control))){
-	if (!mode_editing) && ((atmosphereForce_is_editable) || (control.dev_mode)){
+	if (!mode_editing) && ((atmosphereForce_is_editable) || (global_control.dev_mode)){
 		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
-	else if (gravityForce_is_editable || (control.dev_mode)){
+	else if (gravityForce_is_editable || (global_control.dev_mode)){
 		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
 }
-if ((control.dev_mode) && (place_meeting(x, y, control))){
+if ((global_control.dev_mode) && (place_meeting(x, y, control))){
 	if (mode_editing){
 		if keyboard_check_pressed(ord("1")) typeG = 0;
 		if keyboard_check_pressed(ord("2")) typeG = 1;

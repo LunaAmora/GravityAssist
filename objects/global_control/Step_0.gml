@@ -1,5 +1,10 @@
 if keyboard_check_pressed(vk_escape){
 	if (room == space_room){
+		if (control.win){
+			ini_open(working_directory + "config.ini");
+			ini_write_real("progress","progress", control.current_level+1);
+			ini_close();	
+		}
 		room_goto(MENU);
 	}
 	else{

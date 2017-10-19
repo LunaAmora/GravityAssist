@@ -1,3 +1,3 @@
-if (control.dev_mode){
+if (global_control.dev_mode){
 	instance_destroy();
 }

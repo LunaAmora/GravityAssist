@@ -1,6 +1,6 @@
 draw_text(15, 15, "Level: " + string(current_level+1));
 
-if (dev_mode)
+if (global_control.dev_mode)
 {
 	big_text = "DEVELOPER MODE"
 	small_text = "[space] to toggle"
