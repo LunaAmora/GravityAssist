@@ -1,3 +1,16 @@
+if (keyboard_check_pressed(ord("P")) && room == space_room){
+	if (!pause){
+		pause = !pause;
+		with(spaceship_obj){
+			phy_active = false;
+		}
+			
+	}
+	else{
+		pause = !pause;
+		with(spaceship_obj) phy_active = true;
+	}
+}
 if keyboard_check_pressed(vk_escape){
 	if (room == space_room){
 		if (control.win){

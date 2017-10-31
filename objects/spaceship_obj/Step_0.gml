@@ -9,11 +9,9 @@ if (editing){
 	}
 }
 
-if (!control.edit_mode) && (!control.win)
-{
+if ((!control.edit_mode) && (!control.win) && (!global_control.pause)){
 	var tra = instance_create_layer(x, y, "SFX1", trail_obj);
-	if (perma_trail)
-	{
+	if (perma_trail){
 		with (tra) permanent = true;
 		perma_trail = false;
 		alarm[0] = room_speed / 4;
@@ -23,6 +21,7 @@ if (!control.edit_mode) && (!control.win)
 if (place_meeting(x, y, objective_obj)){
 	control.win = true;
 }
+
 if (control.win){
 	phy_speed_x *= 0.96;
 	phy_speed_y *= 0.96;

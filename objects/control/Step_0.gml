@@ -37,7 +37,7 @@ if !mouse_check_button(mb_middle){
 	y = mouse_y;
 }
 
-if (instance_exists(spaceship_obj)){
+if (instance_exists(spaceship_obj) && (!global_control.pause)){
 	out_timer = ((spaceship_obj.x > 0) && (spaceship_obj.x < room_width) && (spaceship_obj.y > 0) && (spaceship_obj.y < room_height)) ? 0: out_timer+1;
 	if ((out_timer div room_speed) == 4){
 			reset_scr(ship_x, ship_y, ship.ship_impulse, ship.phy_rotation);
@@ -45,7 +45,7 @@ if (instance_exists(spaceship_obj)){
 }
 else out_timer = 0;
 
-if keyboard_check_pressed(vk_space){
+if (keyboard_check_pressed(vk_space) && (!global_control.pause)){
 	if ((win) && (!global_control.dev_mode)){
 		if current_level < (number_of_levels-1){
 			change_level_scr(current_level + 1);
@@ -86,6 +86,6 @@ if (global_control.dev_mode){
 	}
 }
 
-if (!edit_mode) && (!win){
+if ((!edit_mode) && (!win) && (!global_control.pause)){
 	time++;
 }

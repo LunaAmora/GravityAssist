@@ -9,7 +9,7 @@ if (!(outer_radius <= inner_radius)){
 
 	for (a = 0; a < layers; a++){
 	
-		if (variation != 0 && a == 0){
+		if (variation != 0 && (a == 0 || a == layers-1)){
 			final_outer = outer_radius;
 		}
 		else final_outer = outer_radius + (variation*sin(degtorad(var_counter)));

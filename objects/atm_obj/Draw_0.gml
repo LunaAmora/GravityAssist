@@ -12,8 +12,8 @@ if (!(radius <= mim)){
 	surface_set_target(clouds);
 	draw_clear_alpha(c_black, 0);
 
-	draw_sprite_ext(sprite_index, -1, 0 + spr1_pos, radius, image_xscale, image_yscale, 0, colour, image_alpha);
-	draw_sprite_ext(sprite_index, -1, 0 + spr2_pos, radius, image_xscale, image_yscale, 180, colour, image_alpha);
+	draw_sprite_ext(sprite_index, -1, radius + (spr1_pos - radius)*cos(degtorad(rot)), radius - (spr1_pos - radius)*sin(degtorad(rot)), image_xscale, image_yscale, rot, colour, image_alpha);
+	draw_sprite_ext(sprite_index, -1, radius + (spr2_pos - radius)*cos(degtorad(rot)), radius - (spr2_pos - radius)*sin(degtorad(rot)), image_xscale, image_yscale, rot, colour, image_alpha);
 
 
 	surface_set_target(reach);

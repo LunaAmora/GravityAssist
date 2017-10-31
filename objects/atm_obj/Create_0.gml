@@ -6,3 +6,4 @@ spr1_pos = 0;
 spr2_pos = 0;
 image_alpha = 0.8;
 mim = 0;
+rot = irandom(360);
