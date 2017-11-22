@@ -62,18 +62,19 @@ if (instance_exists(target)) && (!control.win){
 }
 
 if (editing = true) && mouse_check_button_released(mb_left){
-	if (!mode_editing){
+	/*if (!mode_editing){
 		if (point_distance(x, y, mouse_x, mouse_y) <= gravity_distance) || (global_control.dev_mode) || (gravity_distance < sprite_height/2){
 			atmosphere_distance = point_distance(x, y, mouse_x, mouse_y);
-			atm.clouds = 0;
-			atm.reach = 0;
+			
 		}
 		else atmosphere_distance = gravity_distance;
 	}
-	else{
-		gravity_distance = point_distance(x, y, mouse_x, mouse_y);
-		light.new = 0;
-	}
+	else{*/
+	gravity_distance = point_distance(x, y, mouse_x, mouse_y);
+	light.new = 0;
+	atm.clouds = 0;
+	atm.reach = 0;
+	//}
 	editing = false;
 }
 
@@ -100,10 +101,8 @@ if ((global_control.dev_mode) && (place_meeting(x, y, control))){
 	}
 }
 
-if ((atmosphere_force > 1000) && (atmosphere_distance != (((gravity_distance - sprite_width/2)/3) + sprite_width/2))){
-	atmosphere_distance = (((gravity_distance - sprite_width/2)/3) + sprite_width/2);
-	atm.clouds = 0;
-	atm.reach = 0;
+if ((atmosphere_force > 1000)){
+	atmosphere_distance = round((gravity_distance + sprite_width)/3)
 }
 else if (atmosphere_distance != 0){
 	atmosphere_distance = 0;
