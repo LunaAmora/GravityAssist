@@ -4,30 +4,30 @@ image_yscale = size;
 switch (typeG){
 	case 0: gravityDistance_is_editable = false;
 			gravityForce_is_editable = false;
-		break; //nada editável S
+		break; //nada editável
 	case 1: gravityDistance_is_editable = true;
 			gravityForce_is_editable = true;
-		break; //tudo editável W
+		break; //tudo editável
 	case 2: gravityDistance_is_editable = true;
 			gravityForce_is_editable = false;
-		break; //apenas distancia gravitacional A
+		break; //apenas distancia gravitacional
 	case 3: gravityDistance_is_editable = false;
 			gravityForce_is_editable = true;
-		break; //apenas força gravitacional D
+		break; //apenas força gravitacional
 }
 switch (typeA){
 	case 0: atmosphereDistance_is_editable = false;
 			atmosphereForce_is_editable = false;
-		break; //nada editável G
+		break; //nada editável
 	case 1: atmosphereDistance_is_editable = true;
 			atmosphereForce_is_editable = true;
-		break; //tudo editável T
+		break; //tudo editável
 	case 2: atmosphereDistance_is_editable = true;
 			atmosphereForce_is_editable = false;
-		break; //apenas distancia atmosférica H
+		break; //apenas distancia atmosférica
 	case 3: atmosphereDistance_is_editable = false;
 			atmosphereForce_is_editable = true;
-		break; //apenas força atmosférica F
+		break; //apenas força atmosférica
 }
 
 
@@ -100,6 +100,13 @@ if ((global_control.dev_mode) && (place_meeting(x, y, control))){
 	}
 }
 
-if (atmosphere_distance > ((gravity_distance - sprite_width/2)/3) + sprite_width/2){
-	atmosphere_distance = (((gravity_distance - sprite_width/2)/3) + sprite_width/2);	
+if ((atmosphere_force > 1000) && (atmosphere_distance != (((gravity_distance - sprite_width/2)/3) + sprite_width/2))){
+	atmosphere_distance = (((gravity_distance - sprite_width/2)/3) + sprite_width/2);
+	atm.clouds = 0;
+	atm.reach = 0;
+}
+else if (atmosphere_distance != 0){
+	atmosphere_distance = 0;
+	atm.clouds = 0;
+	atm.reach = 0;
 }

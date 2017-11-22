@@ -40,8 +40,8 @@ for(i = 0; i < number_of_objectives; i++){
 	obj_y = ini_read_real("*"+string(i), "obj_y", 0);
 	
 	obj_new = instance_create_layer(obj_x, obj_y, "Instances", objective_ring_obj);
-	obj_new.angle = ini_read_real("*"+string(i), "angle", 0);
-	obj_new.dist = ini_read_real("*"+string(i), "dist", 0);
+//	obj_new.angle = ini_read_real("*"+string(i), "angle", 0);
+//	obj_new.dist = ini_read_real("*"+string(i), "dist", 0);
 }
 
 objective_x = ini_read_real("config", "objective_x", room_width/2);

@@ -2,7 +2,7 @@ level = argument0;
 
 ini_open(working_directory + string(level)+".ini");
 ini_write_real("config", "number_of_planets", instance_number(planet_obj));
-ini_write_real("config", "number_of_objectives", instance_number(objective_ring_obj)/2);
+ini_write_real("config", "number_of_objectives", instance_number(objective_ring_obj));
 ini_write_real("config", "objective_x", objective_obj.x);
 ini_write_real("config", "objective_y", objective_obj.y);
 ini_write_real("config", "ship_x", spaceship_obj.x)
@@ -40,15 +40,15 @@ obj_count = 0;
 
 list_objectives = ds_priority_create();
 with(objective_ring_obj){
-	if (first) ds_priority_add(other.list_objectives, id, id);
+	ds_priority_add(other.list_objectives, id, id);
 }
 
 while (!ds_priority_empty(list_objectives)){
 	objective = ds_priority_delete_min(list_objectives);
 	ini_write_real("*"+string(obj_count), "obj_x", objective.x);
 	ini_write_real("*"+string(obj_count), "obj_y", objective.y);
-	ini_write_real("*"+string(obj_count), "angle", objective.angle);
-	ini_write_real("*"+string(obj_count), "dist", objective.dist);
+	//ini_write_real("*"+string(obj_count), "angle", objective.angle);
+	//ini_write_real("*"+string(obj_count), "dist", objective.dist);
 	obj_count++
 }
 

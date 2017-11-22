@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "27e87502-8fa5-48ec-be01-d3036cbb6c69",
+            "Value": {
+                "id": "c7221230-6c49-459d-90d1-6dc446f48e81",
+                "resourcePath": "sprites\\star_objective_spr\\star_objective_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ca6a773-919d-463f-b799-81153f116846",
             "Value": {
                 "id": "06210f88-0b6c-4e12-b5f5-6ac5bd60f061",
