@@ -55,8 +55,8 @@ if (instance_exists(target)) && (!control.win){
 	{
 		with (target)
 		{
-			phy_speed_x *= other.atmosphere_force/1000;
-			phy_speed_y *= other.atmosphere_force/1000;
+			phy_speed_x *= (1000 - (other.atmosphere_force-1000))/1000;
+			phy_speed_y *= (1000 - (other.atmosphere_force-1000))/1000;
 		}
 	}
 }
@@ -79,7 +79,7 @@ if (editing = true) && mouse_check_button_released(mb_left){
 }
 
 if ((control.edit_mode) && (place_meeting(x, y, control))){
-	if (!mode_editing) && ((atmosphereForce_is_editable) || (global_control.dev_mode)){
+	if (!mode_editing) && ((atmosphereForce_is_editable) || (global_control.dev_mode)) && atmosphere_force > 1000{
 		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
 	else if (gravityForce_is_editable || (global_control.dev_mode)){
