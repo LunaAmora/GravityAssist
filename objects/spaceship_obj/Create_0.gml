@@ -5,6 +5,7 @@ angle = 0;
 light = id;
 perma_trail = false;
 alarm[0] = room_speed / 4;
+is_ship = true;
 
 //ilusion_ x = 0;
 //ilusion_ y = 0;

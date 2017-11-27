@@ -34,29 +34,36 @@ switch (typeA){
 if (keyboard_check_pressed(vk_control) ) mode_editing = (!mode_editing);
 //&& (place_meeting(x, y, control))
 
-target = spaceship_obj;
-
-if (instance_exists(target)) && (!control.win){
-	
-	distance_to_ship = point_distance(x, y, target.x, target.y);
-	
-	if (distance_to_ship <= gravity_distance && !control.edit_mode)
+with (physics_parent)
+{
+	with (other)
 	{
-		direc_to_ship = point_direction(x, y, target.x, target.y)
-		gravity_force = power(sprite_height, 2)* 2.5 * density/power(distance_to_ship, 2);
+		target = other;
+		
+		if (!control.win) {
 	
-		with (target)
-		{
-			physics_apply_force(x, y, other.gravity_force * -cos(degtorad(other.direc_to_ship)), other.gravity_force * sin(degtorad(other.direc_to_ship)));
-		}
-	}
+			distance_to_ship = point_distance(x, y, target.x, target.y);
 	
-	if (distance_to_ship <= atmosphere_distance && !control.edit_mode)
-	{
-		with (target)
-		{
-			phy_speed_x *= (1000 - (other.atmosphere_force-1000))/1000;
-			phy_speed_y *= (1000 - (other.atmosphere_force-1000))/1000;
+			if (distance_to_ship <= gravity_distance && (!control.edit_mode || (!target.is_ship)))
+			{
+				direc_to_ship = point_direction(x, y, target.x, target.y)
+				gravity_force = power(sprite_height, 2)* 2.5 * density/power(distance_to_ship, 2);
+				if (!target.is_ship) gravity_force = 40;
+	
+				with (target)
+				{
+					physics_apply_force(x, y, other.gravity_force * -cos(degtorad(other.direc_to_ship)), other.gravity_force * sin(degtorad(other.direc_to_ship)));
+				}
+			}
+	
+			if (distance_to_ship <= atmosphere_distance && !control.edit_mode)
+			{
+				with (target)
+				{
+					phy_speed_x *= (1000 - (other.atmosphere_force-1000))/1000;
+					phy_speed_y *= (1000 - (other.atmosphere_force-1000))/1000;
+				}
+			}
 		}
 	}
 }

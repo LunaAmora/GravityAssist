@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "6fcec4bc-8a95-4236-a512-21f1e5c9f13e",
+            "Value": {
+                "id": "cef9b922-8ce5-4cec-93b3-6d1d4a72dfc3",
+                "resourcePath": "sprites\\particle_spr\\particle_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "747bb6d9-fb6d-4a1b-9d38-e658312880be",
             "Value": {
                 "id": "17448ce0-5244-4b14-9843-e19b348179e3",
@@ -532,6 +540,14 @@
                 "id": "6107ad9a-b4b3-4374-b368-829afa67c1be",
                 "resourcePath": "sprites\\explosion_spr\\explosion_spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fadcfa6b-27c8-4d4d-8ced-91724a9aa001",
+            "Value": {
+                "id": "18110745-bb2a-4e7d-aabc-c54b75f3a34e",
+                "resourcePath": "objects\\physics_parent\\physics_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
