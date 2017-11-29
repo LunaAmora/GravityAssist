@@ -82,12 +82,15 @@ if (editing = true) && mouse_check_button_released(mb_left){
 }
 
 if ((control.edit_mode) && (place_meeting(x, y, control))){
-	if ((!control.mode_editing) && (atmosphereForce_is_editable) && atmosphere_force >= 1001 || (global_control.dev_mode)){
-		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);
-		if (atmosphere_force < 1001 && !global_control.dev_mode) atmosphere_force = 1001;
+	if (!control.mode_editing){
+		if ((atmosphereForce_is_editable && atmosphere_force >= 1001) || (global_control.dev_mode)){
+			atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);
+			if (atmosphere_force < 1001 && !global_control.dev_mode) atmosphere_force = 1001;
+		}
 	}
-	else if (gravityForce_is_editable || (global_control.dev_mode)){
-		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
+	else if (gravityForce_is_editable && density >= 1|| (global_control.dev_mode)){
+		density += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);
+		if (density < 0 && !global_control.dev_mode) density = 0;
 	}
 }
 if ((global_control.dev_mode) && (place_meeting(x, y, control))){

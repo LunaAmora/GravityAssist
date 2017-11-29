@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "011e05b3-0e03-4cfa-87a6-161cbff0c83d",
+            "Value": {
+                "id": "cf6cc8c2-af74-4fb8-87fa-b392a9bb0603",
+                "resourcePath": "datafiles_yy\\7.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "067487b6-a549-48ec-a5b2-84abd257ef97",
             "Value": {
                 "id": "eaef8585-d315-4d5f-aea8-7bddc3dd33a4",
@@ -332,14 +340,6 @@
                 "id": "08727e5c-cc89-4255-8c5c-9960d64f80de",
                 "resourcePath": "sprites\\planet_spr\\planet_spr.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "852223f5-dd1e-4303-a385-4b401560ea02",
-            "Value": {
-                "id": "aefb0560-ea60-42d5-9e0a-20d84012ce11",
-                "resourcePath": "datafiles_yy\\7.ini.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
