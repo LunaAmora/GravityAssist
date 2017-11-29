@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "4f6e1729-a3a7-4c26-9954-b5d72993f173",
+            "Value": {
+                "id": "af5e0f68-a666-4eb6-92f7-7ec5e340f262",
+                "resourcePath": "sprites\\sprite13\\sprite13.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "58c82ae7-4b36-4a09-8e2d-58ec3ff2aab6",
             "Value": {
                 "id": "206083cc-ea01-4a1f-ab54-5ba519b6c29e",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "9af2fd4b-7f87-46a6-9dcc-8934f2a3318e",
+            "Value": {
+                "id": "b38f0d60-d7a2-4368-8d4e-3d951d7c0e08",
+                "resourcePath": "sprites\\play_button_spr\\play_button_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9d403079-78fc-4536-9fc5-e432934a0f19",
             "Value": {
                 "id": "06955ae6-8bef-475e-a4c9-42dc2721ad81",
@@ -383,6 +399,14 @@
             }
         },
         {
+            "Key": "a905f11e-de22-405c-b386-da248d20c613",
+            "Value": {
+                "id": "22298882-c0b0-411b-8314-d234e0374d69",
+                "resourcePath": "objects\\atmosphere_button_obj\\atmosphere_button_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "b9492635-a208-482a-9b5b-87ace265b98f",
@@ -403,6 +427,14 @@
             "Value": {
                 "id": "12872249-55ca-4efd-a112-7ba3f0dd2b6d",
                 "resourcePath": "objects\\control\\control.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b17d6f53-749c-41c2-a6c7-f97a44ef4a6d",
+            "Value": {
+                "id": "da80e1f9-f0e9-4077-ab78-fb22e9b4de56",
+                "resourcePath": "objects\\game_button_obj\\game_button_obj.yy",
                 "resourceType": "GMObject"
             }
         },

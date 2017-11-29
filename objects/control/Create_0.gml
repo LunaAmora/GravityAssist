@@ -9,6 +9,7 @@ time = 0;
 seconds = 0;
 hsv_light = 255;
 out_timer = 0;
+change_mode = false;
 
 ini_open(working_directory + "config.ini");
 number_of_levels = ini_read_real("config", "number_of_levels", 1);

@@ -45,7 +45,8 @@ if (instance_exists(spaceship_obj) && (!global_control.pause)){
 }
 else out_timer = 0;
 
-if (keyboard_check_pressed(vk_space) && (!global_control.pause)){
+if ((keyboard_check_pressed(vk_space) && (!global_control.pause))) || (change_mode){
+	change_mode = false;
 	if ((win) && (!global_control.dev_mode)){
 		if current_level < (number_of_levels-1){
 			change_level_scr(current_level + 1);
