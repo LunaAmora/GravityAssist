@@ -19,7 +19,7 @@ switch (level+1)
 	draw_text(room_width-250, 500, "SCROLL THE MOUSE WHEEL OVER A PLANET\nTO CHANGE ITS GRAVITATIONAL STRENGHT\nHOLD SHIFT TO CHANGE FASTER")
 	break;
 	case 8:
-	draw_text(350, 150, "PRESS CTRL to edit the ATMOSFERE DESITY with the MOUSE WHEEL.\nMORE ATMOSPHERE DENSITY reduces the velocity of the SHIP")
+	draw_text(350, 150, "PRESS CTRL to edit the ATMOSFERE DENSITY with the MOUSE WHEEL.\nMORE ATMOSPHERE DENSITY reduces the velocity of the SHIP")
 	break;
 	default:
 	break;

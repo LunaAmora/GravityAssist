@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "011e05b3-0e03-4cfa-87a6-161cbff0c83d",
-            "Value": {
-                "id": "cf6cc8c2-af74-4fb8-87fa-b392a9bb0603",
-                "resourcePath": "datafiles_yy\\7.ini.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "067487b6-a549-48ec-a5b2-84abd257ef97",
             "Value": {
                 "id": "eaef8585-d315-4d5f-aea8-7bddc3dd33a4",
@@ -363,6 +355,14 @@
             "Value": {
                 "id": "089610a7-548f-4a7b-9cec-5c93fa13df18",
                 "resourcePath": "datafiles_yy\\4.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "932920b6-ae5b-46a5-94b7-4bd94eb5dc67",
+            "Value": {
+                "id": "57d6369c-f817-450c-ad67-3c937424ea3f",
+                "resourcePath": "datafiles_yy\\7.ini.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
