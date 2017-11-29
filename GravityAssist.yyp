@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "cdb32145-0e7f-491e-a329-b43440b0ba33",
+            "Value": {
+                "id": "45ca28d2-bf34-4134-9871-f690ac58d1e0",
+                "resourcePath": "sprites\\atmosphere_button_spr1\\atmosphere_button_spr1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cddb1f3a-01fc-4a45-9070-d7f08b39f7de",
             "Value": {
                 "id": "35b5a856-42e8-4937-ad5b-4979df20595d",
