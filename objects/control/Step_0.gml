@@ -8,6 +8,8 @@ if (global_control.dev_mode){
 	}
 }
 
+if (keyboard_check_pressed(vk_control) ) mode_editing = (!mode_editing);
+
 if keyboard_check_pressed(vk_tab){
 	if (global_control.dev_mode) global_control.dev_mode = false;
 	else global_control.dev_mode = true;

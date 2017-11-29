@@ -30,10 +30,6 @@ switch (typeA){
 		break; //apenas força atmosférica
 }
 
-
-if (keyboard_check_pressed(vk_control) ) mode_editing = (!mode_editing);
-//&& (place_meeting(x, y, control))
-
 with (physics_parent)
 {
 	with (other)
@@ -69,7 +65,7 @@ with (physics_parent)
 }
 
 if (editing = true) && mouse_check_button_released(mb_left){
-	/*if (!mode_editing){
+	/*if (!control.mode_editing){
 		if (point_distance(x, y, mouse_x, mouse_y) <= gravity_distance) || (global_control.dev_mode) || (gravity_distance < sprite_height/2){
 			atmosphere_distance = point_distance(x, y, mouse_x, mouse_y);
 			
@@ -86,7 +82,7 @@ if (editing = true) && mouse_check_button_released(mb_left){
 }
 
 if ((control.edit_mode) && (place_meeting(x, y, control))){
-	if ((!mode_editing) && (atmosphereForce_is_editable) && atmosphere_force >= 1001 || (global_control.dev_mode)){
+	if ((!control.mode_editing) && (atmosphereForce_is_editable) && atmosphere_force >= 1001 || (global_control.dev_mode)){
 		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);
 		if (atmosphere_force < 1001 && !global_control.dev_mode) atmosphere_force = 1001;
 	}
@@ -95,7 +91,7 @@ if ((control.edit_mode) && (place_meeting(x, y, control))){
 	}
 }
 if ((global_control.dev_mode) && (place_meeting(x, y, control))){
-	if (mode_editing){
+	if (control.mode_editing){
 		if keyboard_check_pressed(ord("1")) typeG = 0;
 		if keyboard_check_pressed(ord("2")) typeG = 1;
 		if keyboard_check_pressed(ord("3")) typeG = 2;

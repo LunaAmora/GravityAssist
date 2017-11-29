@@ -14,8 +14,6 @@ gravity_distance = 200;
 atmosphere_distance = 200;
 atmosphere_force = 1000;
 
-mode_editing = true;
-
 editing = false;
 
 gravityForce_is_editable = false;

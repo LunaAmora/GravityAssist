@@ -6,7 +6,7 @@ if ((global_control.dev_mode) && (control.edit_mode) && (place_meeting(x, y, con
 draw_set_halign(fa_left);
 
 if (control.edit_mode){
-	if ((atmosphereForce_is_editable && !mode_editing) || (gravityForce_is_editable && mode_editing)){
+	if ((atmosphereForce_is_editable && !control.mode_editing) || (gravityForce_is_editable && control.mode_editing)){
 		draw_set_color(c_ltgray);
 	}
 	else{
@@ -16,7 +16,7 @@ if (control.edit_mode){
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
 
-	if (!mode_editing){
+	if (!control.mode_editing){
 		draw_text(x, y, string(atmosphere_force-1000));
 	}
 	else draw_text(x, y, string(density));

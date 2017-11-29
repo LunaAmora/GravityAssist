@@ -1,5 +1,7 @@
 draw_set_circle_precision(64);
 
+mode_editing = true;
+
 col = irandom(255);
 coll = 0;
 win = false;
