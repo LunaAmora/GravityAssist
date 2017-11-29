@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(ord("P")) && room == space_room){
+if (keyboard_check_pressed(vk_alt) && room == space_room){
 	if (!pause){
 		pause = !pause;
 		with(spaceship_obj){

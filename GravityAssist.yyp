@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "852223f5-dd1e-4303-a385-4b401560ea02",
+            "Value": {
+                "id": "aefb0560-ea60-42d5-9e0a-20d84012ce11",
+                "resourcePath": "datafiles_yy\\7.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "8857db09-3ac2-4bfc-ae2b-d0df8e594ac8",
             "Value": {
                 "id": "348090a9-28c6-41f2-a341-661a2da57736",
