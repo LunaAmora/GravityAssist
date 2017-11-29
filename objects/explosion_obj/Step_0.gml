@@ -1,1 +1,2 @@
-if (image_index >= 5) instance_destroy();
+count++;
+if (count > 2) instance_destroy(); 
