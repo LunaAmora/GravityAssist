@@ -86,7 +86,7 @@ if (editing = true) && mouse_check_button_released(mb_left){
 }
 
 if ((control.edit_mode) && (place_meeting(x, y, control))){
-	if (!mode_editing) && ((atmosphereForce_is_editable) || (global_control.dev_mode)) && atmosphere_force > 1000{
+	if (!mode_editing) && ((atmosphereForce_is_editable) || (global_control.dev_mode)) && atmosphere_force >= 1000{
 		atmosphere_force += (mouse_wheel_up() - mouse_wheel_down()) * (1 + keyboard_check(vk_shift)*9);;
 	}
 	else if (gravityForce_is_editable || (global_control.dev_mode)){
